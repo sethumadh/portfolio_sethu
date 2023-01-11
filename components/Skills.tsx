@@ -1,83 +1,108 @@
 import React from "react"
 import { motion } from "framer-motion"
+import { images } from "../constants"
+import Image from "next/image"
 
 const Skills = () => {
   const items = [
     {
       id: 1,
-      src: "html.png",
+      src: images.html,
       title: "HTML",
       style: "shadow-orange-500",
     },
     {
       id: 2,
-      src: "css.png",
+      src: images.css,
       title: "CSS",
       style: "shadow-blue-500",
     },
     {
       id: 3,
-      src: "javascript.png",
+      src: images.js,
       title: "JavaScript",
       style: "shadow-yellow-500",
     },
     {
       id: 4,
-      src: "react.png",
+      src: images.react,
       title: "React",
       style: "shadow-blue-600",
     },
     {
       id: 5,
-      src: "tailwind.png",
+      src: images.tailwind,
       title: "Tailwind",
       style: "shadow-sky-400",
     },
     {
       id: 6,
-      src: "nextjs.png",
+      src: images.next,
       title: "Next JS",
       style: "shadow-white",
     },
     {
       id: 7,
-      src: "graphql.png",
+      src: images.graphql,
       title: "GraphQL",
       style: "shadow-pink-400",
     },
     {
       id: 8,
-      src: "git.png",
+      src: images.github,
       title: "GitHub",
       style: "shadow-gray-400",
     },
     {
       id: 9,
-      src: "redux.png",
+      src: images.redux,
       title: "Redux",
       style: "shadow-gray-400",
     },
     {
       id: 10,
-      src: "typescript.png",
+      src: images.typescript,
       title: "TypeScript",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 11,
+      src: images.framer,
+      title: "Framer Motion",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 12,
+      src: images.mongodb,
+      title: "Mongo DB",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 13,
+      src: images.sanity,
+      title: "Sanity",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 14,
+      src: images.node,
+      title: "Node js",
       style: "shadow-gray-400",
     },
   ]
   return (
+    <section className="mt min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col items-center justify-center border-8 border-orange-400">
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.5 }}
       transition={{ duration: 0.5 }}
       variants={{
         hidden: { opacity: 0, x: -50 },
         visible: { opacity: 1, x: 0 },
       }}
-      id="Experience"
-      className="min-h-screen max-w-screen-lg mx-auto py-32 md:py-28 px-16"
+      className="w-full min-h-screen border-8 border-blue flex flex-col md:justify-center md:items-center "
     >
-      <div className="flex flex-col  md:justify-center md:items-center border-red ">
         <p className="text-4xl font-bold  border-b-4 p-0 border-deep-blue text-center md:text-start">
           Experience
         </p>
@@ -91,14 +116,15 @@ const Skills = () => {
                 className="shadow-md shadow-[#040c16] hover:scale-110 duration-500"
                 key={id}
               >
-                <img src={src} alt={src} className="w-20 mx-auto" />
+                <Image src={src} alt={"tech"} className="w-20 mx-auto" />
                 <p className="my-4">{title}</p>
               </div>
             )
           })}
         </div>
-      </div>
+      
     </motion.div>
+    </section>
   )
 }
 

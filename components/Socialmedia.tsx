@@ -47,7 +47,7 @@ export default function Socialmedia() {
         </>
       ),
       href: "/resume.pdf",
-      url:"https://twitter/sethumadh",
+      url:"/resume.pdf",
       stylesm:"",
       style: "rounded-br-md bg-[#565f69]",
       download: true,
@@ -56,7 +56,7 @@ export default function Socialmedia() {
 
   return (
     <>
-      <div className="flex flex-row justify-center items-center w-2/3 mx-auto md:hidden mb-32">
+      <div className="flex flex-row justify-center items-center w-2/3 mx-auto md:hidden mt-12">
         {links.map(({ id, url}) => {
           return (
             <div key={id} className="px-2">

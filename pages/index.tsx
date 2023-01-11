@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 
 import { Navbar } from "../components"
 import { NavigationDots, About, Contact, Skills, Footer } from "../components"
+import { images } from '../constants'
 
 const Home: NextPage = () => {
   const [activePage, setActivePage] = useState("Home")
@@ -21,24 +22,24 @@ const Home: NextPage = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
   return (
-    <div className="w-full min-h-screen bg-hero bg-repeat ">
+    <div className="w-full min-h-screen bg-hero bg-repeat   ">
       <Head>
         <title>Sethu&apos;s Portfolio</title>
       </Head>
 
       <NavigationDots activePage={activePage} setActivePage={setActivePage} />
-      <div id="Home" className=" min-h-screen">
+      <div id="Home" className="border-8 border-red">
         <Navbar
           activePage={activePage}
           setActivePage={setActivePage}
           isTopOfPage={isTopOfPage}
         />
-        <About setActivePage={setActivePage} />
+        <About setActivePage={setActivePage}  />
       </div>
-      <div id="Experience" className="min-h-screen">
+      <div id="Experience" className="">
         <Skills />
       </div>
-      <div id="Contact" className="min-h-screen">
+      <div id="Contact" className="">
         <Contact />
         <Footer />
       </div>

@@ -13,7 +13,7 @@ const Contact = () => {
         visible: { opacity: 1, x: 0 },
       }}
       
-      className=" w-[90%] max-w-[1800px] min-h-screen mx-auto border-8 border-red flex justify-center items-center py-12 p-4 mb-8"
+      className=" max-w-screen-lg mx-auto h-[90%] flex justify-center items-center py-12 p-4 mb-8"
     >
       <form
         method="POST"

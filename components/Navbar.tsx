@@ -18,10 +18,18 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
   console.log(isTopOfPage, dynamicNavbarBG)
 
   return (
-    <nav
-      className={`bg-red bg-repeat z-1000 fixed top-0 flex flex-row items-center justify-between p-2 pr-4 container mx-auto  max-w-screen-lg py-6  transition duration-150 bg-${dynamicNavbarBG} `}
+    <motion.nav
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0 },
+      }}
+      className={`navbar max-w-[90%] w-[1800px] mx-auto border-8 border-red  fixed top-0 right-0 left-0 bg-hero z-20 flex flex-row items-center justify-between  px-2 py-6 transition duration-150 bg-${dynamicNavbarBG} `}
     >
-      <div className="text-4xl font-playfair font-semibold ml-4 cursor-pointer">
+      <div className="text-6xl font-playfair font-semibold cursor-pointer">
         <Link to="Home" smooth={true} offset={50} duration={500}>
           <h1>SM</h1>
         </Link>
@@ -31,7 +39,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
         {links.map((link, i) => (
           <li
             key={i}
-            className="mr-4 cursor-pointer capitalize font-medium hover:scale-105 duration-250 text-lg semi-bold "
+            className=" cursor-pointer capitalize font-medium tracking-[5px] hover:scale-105 duration-250 text-2xl  "
           >
             <Link
               to={link}
@@ -39,7 +47,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
               offset={50}
               duration={500}
               className={
-                activePage == link
+                "" + activePage == link
                   ? "border-b-2 border-gray-400 pb-0 rounded-l-md rounded-r-md transition duration-300"
                   : ""
               }
@@ -95,7 +103,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
           </ul>
         </motion.div>
       )}
-    </nav>
+    </motion.nav>
   )
 }
 
