@@ -6,6 +6,7 @@ import { Navbar } from "../components"
 import { NavigationDots, About, Contact, Skills, Footer } from "../components"
 import { images } from '../constants'
 import Works from "../components/Works"
+import Aboutme from "../components/Aboutme"
 
 const Home: NextPage = () => {
   const [activePage, setActivePage] = useState("Home")
@@ -29,13 +30,16 @@ const Home: NextPage = () => {
       </Head>
 
       <NavigationDots activePage={activePage} setActivePage={setActivePage} />
-      <div id="Home" className="border-8 border-red">
+      <div id="Home" className="">
         <Navbar
           activePage={activePage}
           setActivePage={setActivePage}
           isTopOfPage={isTopOfPage}
         />
         <About setActivePage={setActivePage}  />
+      </div>
+      <div id="About">
+        <Aboutme/>
       </div>
       <div id="Works">
         <Works/>

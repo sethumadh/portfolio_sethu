@@ -16,12 +16,12 @@ const Footer = () => {
       }}
       id="Experience"
     >
-      <footer className="border-8 border-red w-[90%] max-w-[1800px] mx-auto flex flex-row justify-around items-center py-4">
-            <p className="font-playfair font-semibold text-2xl w-1/2 flex justify-center ">
+      <footer className=" w-[90%] max-w-[1800px] mx-auto flex flex-col md:flex-row justify-around items-end py-4">
+            <p className="font-playfair font-semibold text-2xl w-full flex justify-center">
               Sethu Madhavan
             </p>
-            <p className="font-playfair text-md font-semibold w-1/2 flex justify-center ">
-              ©2022 Powered by Next JS, TypeScript and Tailwind.
+            <p className="font-playfair text-xs font-semibold w-full flex justify-center ">
+              ©2022 Powered by Next JS, TypeScript & Tailwind.
             </p>
       </footer>
     </motion.div>

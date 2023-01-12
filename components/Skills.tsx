@@ -92,23 +92,26 @@ const Skills = () => {
     },
   ]
   return (
-    <section className=" md:min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col items-center justify-center border-8 border-orange-400">
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5 }}
-      variants={{
-        hidden: { opacity: 0, x: -50 },
-        visible: { opacity: 1, x: 0 },
-      }}
-      className="w-full md:min-h-screen border-8 border-blue flex flex-col md:justify-center md:items-center "
-    >
-        <div className="font-playfair font-semibold text-4xl">
-            <span className="text-gray-500">Technologies</span> <span className="italic">I have worked with</span> 
-            <LineGradient width="w-full"/>
+    <section className=" md:min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col items-center justify-center mt-28 ">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="w-full md:min-h-screen  flex flex-col md:justify-center md:items-center  "
+      >
+         <div className="pb-8 flex flex-col  md:justify-center items-center">
+          <div className="font-playfair font-semibold text-base md:text-4xl mb-24 ">
+            <span className="text-gray-500">TECHNOLOGIES   </span>{" "}
+            <span className="italic">I HAVE WORKED WITH</span>
+            <LineGradient width="w-full" />
           </div>
-          
+        </div>
+
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
           {items.map(({ id, src, title }) => {
             return (
@@ -122,8 +125,8 @@ const Skills = () => {
             )
           })}
         </div>
-      
-    </motion.div>
+      </motion.div>
+      <br />
     </section>
   )
 }
