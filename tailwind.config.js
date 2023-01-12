@@ -22,6 +22,10 @@ module.exports = {
           "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
           
           'hero': "url('../public/45degreee_fabric.png')",
+          'filmpire': "url('../public/filmpire.png')",
+          'musicplayer': "url('../public/musicplayer.png')",
+          'passwordapp': "url('../public/passwordapp.png')",
+
       }),
       fontFamily:{
         opensans:['Open Sans', 'sans-serif'],

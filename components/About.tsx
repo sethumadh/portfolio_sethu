@@ -14,11 +14,11 @@ type AboutProps = {
 
 function About({ setActivePage }: AboutProps) {
   return (
-    <section className="mt min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col items-center justify-center border-8 border-green-400">
+    <section className="mt-24 md:min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col items-center justify-center border-8 border-green-400">
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: -50 },
@@ -34,13 +34,13 @@ function About({ setActivePage }: AboutProps) {
           />
         </div>
         <div className=" flex flex-col justify-center items-center border-8 px-4">
-          <h2 className="mt-4 text-6xl font-playfair font-semibold md:text-start text-center mb-2 ">
+          <h2 className="mt-4 md:text-6xl text-2xl font-playfair font-semibold md:text-start text-center mb-4 ">
             Software Developer
           </h2>
-          <h1 className="text-5xl font-playfair text-center md:text-start">
+          <h1 className="md:text-5xl text-xl font-playfair text-center md:text-start mb-4">
             Sethu Madhavan
           </h1>
-          <h3 className="mt-4 mb-4 text-lg text-center  ">
+          <h3 className="mt-4 mb-4 text-2xl text-center  ">
             A passionate Full-Stack software engineer and a code enthusiast with
             experience in building applications by writing clean, stable code.
           </h3>
@@ -51,7 +51,7 @@ function About({ setActivePage }: AboutProps) {
               offset={50}
               duration={500}
               onClick={() => setActivePage("Contact")}
-              className="cursor-pointer  bg-gradient-rainblue text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+              className="cursor-pointer w-1/2  bg-gradient-rainblue text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
             >
               My Works
             </Link>
@@ -65,7 +65,7 @@ function About({ setActivePage }: AboutProps) {
               offset={50}
               duration={500}
               onClick={() => setActivePage("Contact")}
-              className="group flex flex-row  items-center cursor-pointer bg-gray-300  text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue  transition duration-500"
+              className="group flex flex-row  w-1/2 items-center cursor-pointer bg-gray-300  text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue  transition duration-500"
             >
               Download CV
               <div className="group-hover:rotate-90 transition duration-200">
@@ -78,7 +78,7 @@ function About({ setActivePage }: AboutProps) {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: -50 },

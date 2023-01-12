@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import { Navbar } from "../components"
 import { NavigationDots, About, Contact, Skills, Footer } from "../components"
 import { images } from '../constants'
+import Works from "../components/Works"
 
 const Home: NextPage = () => {
   const [activePage, setActivePage] = useState("Home")
@@ -35,6 +36,9 @@ const Home: NextPage = () => {
           isTopOfPage={isTopOfPage}
         />
         <About setActivePage={setActivePage}  />
+      </div>
+      <div id="Works">
+        <Works/>
       </div>
       <div id="Experience" className="">
         <Skills />

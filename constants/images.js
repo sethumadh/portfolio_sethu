@@ -1,4 +1,3 @@
-
 import js from "../assets/js.png"
 import mongodb from "../assets/mongobd.png"
 import next from "../assets/next.png"
@@ -19,11 +18,14 @@ import redux from "../assets/redux.png"
 import graphql from "../assets/graphql.png"
 import typescript from "../assets/typescript.png"
 import node from "../assets/node.png"
+import musicplayer from "../assets/musicplayer.png"
+import filmpire from "../assets/filmpire.png"
+import passwordapp from "../assets/passwordapp.png"
+import carrental from "../assets/carrental.png"
 
 import contactProject from "../assets/contactProject.jpg"
 
 export default {
- 
   js,
   mongodb,
   next,
@@ -44,6 +46,9 @@ export default {
   redux,
   graphql,
   typescript,
-  node
-
+  node,
+  carrental,
+  passwordapp,
+  musicplayer,
+  filmpire
 }

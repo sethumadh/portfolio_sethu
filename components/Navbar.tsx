@@ -27,9 +27,9 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
         hidden: { opacity: 0, x: -50 },
         visible: { opacity: 1, x: 0 },
       }}
-      className={`navbar max-w-[90%] w-[1800px] mx-auto border-8 border-red  fixed top-0 right-0 left-0 bg-hero z-20 flex flex-row items-center justify-between  px-2 py-6 transition duration-150 bg-${dynamicNavbarBG} `}
+      className={`navbar max-w-[90%] w-[1800px] mx-auto border-8 border-red fixed top-0 right-0 left-0 bg-hero z-20 flex flex-row items-center justify-between  px-2 py-6 md:py-2 transition duration-150 bg-${dynamicNavbarBG} `}
     >
-      <div className="text-6xl font-playfair font-semibold cursor-pointer">
+      <div className="md:text-6xl text-2xl font-playfair font-semibold cursor-pointer">
         <Link to="Home" smooth={true} offset={50} duration={500}>
           <h1>SM</h1>
         </Link>
