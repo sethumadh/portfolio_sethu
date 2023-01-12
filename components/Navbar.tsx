@@ -44,7 +44,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
             <Link
               to={link}
               smooth={true}
-              offset={50}
+              offset={-100}
               duration={500}
               className={
                 "" + activePage == link
