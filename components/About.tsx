@@ -33,20 +33,28 @@ function About({ setActivePage }: AboutProps) {
             className="w-full object-cover"
           />
         </div>
-        <div className=" flex flex-col justify-center items-center px-4">
-          <h2 className="mt-4 md:text-6xl text-2xl font-playfair font-semibold md:text-start text-center mb-4 ">
-            Software Developer
-          </h2>
-          <h1 className="md:text-5xl text-xl font-playfair text-center md:text-start mb-4">
-            Sethu Madhavan
-          </h1>
-          <h3 className="mt-4 mb-4 text-2xl text-center  ">
-            A passionate Full-Stack software engineer and a code enthusiast with
-            experience in building applications by writing clean, stable code.
-          </h3>
+        <div className=" flex flex-col justify-center items-center px-4   h-full">
+          <div className="max-w-[1000px] mx-auto w-full grid sm:grid-cols-2 gap-8 px-4  mb-8">
+            <div className="sm:text-right text-4xl font-bold ">
+              <p>
+                Hi. I'm Sethumadhavan, nice to meet you. Please take a look
+                around.
+              </p>
+            </div>
+            <div className=" text-lg md:text-xl">
+              <p>
+                I am a passionate Full-Stack software engineer and a code enthusiast
+                with experience in building applications by writing clean,
+                stable code. Active learner always keen for new knowledge and
+                find solutions whle facing new difficulties. A developer good at
+                collaborating and communicating with others, who plays vital
+                role among teams.
+              </p>
+            </div>
+          </div>
           <div className="flex flex-row gap-4 justify-center items-center md:justify-start">
             <Link
-              to={`Contact`}
+              to={`Works`}
               smooth={true}
               offset={50}
               duration={500}
@@ -67,7 +75,7 @@ function About({ setActivePage }: AboutProps) {
               onClick={() => setActivePage("Contact")}
               className="group flex flex-row h-12 w-1/2 items-center cursor-pointer bg-gray-300  text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue  transition duration-500"
             >
-              <h1>Download CV</h1> 
+              <h1>Download CV</h1>
               <div className="group-hover:rotate-90 transition duration-200">
                 <MdOutlineKeyboardArrowRight size={20} />
               </div>
@@ -88,8 +96,9 @@ function About({ setActivePage }: AboutProps) {
       >
         <Socialmedia />
       </motion.div>
-      <div className="hidden md:flex"><Socialmedia /></div>
-      
+      <div className="hidden md:flex">
+        <Socialmedia />
+      </div>
     </section>
   )
 }

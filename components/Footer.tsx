@@ -20,7 +20,7 @@ const Footer = () => {
             <p className="font-playfair font-semibold text-2xl w-full flex justify-center">
               Sethu Madhavan
             </p>
-            <p className="font-playfair text-xs font-semibold w-full flex justify-center ">
+            <p className="font-playfair text-xs md:text-lg font-semibold w-full flex justify-center ">
               ©2022 Powered by Next JS, TypeScript & Tailwind.
             </p>
       </footer>

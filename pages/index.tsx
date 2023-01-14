@@ -1,12 +1,15 @@
+import React, { useState, useEffect } from "react"
 import Head from "next/head"
 import type { NextPage } from "next"
-import { useState, useEffect } from "react"
 
 import { Navbar } from "../components"
 import { NavigationDots, About, Contact, Skills, Footer } from "../components"
 import { images } from '../constants'
 import Works from "../components/Works"
 import Aboutme from "../components/Aboutme"
+import Aboutmecopy from "../components/Aboutmecopy"
+import Workscopy from "../components/Workscopy"
+
 
 const Home: NextPage = () => {
   const [activePage, setActivePage] = useState("Home")
@@ -41,9 +44,16 @@ const Home: NextPage = () => {
       <div id="About">
         <Aboutme/>
       </div>
-      <div id="Works">
+      {/* <div id="Aboutmecopy">
+        <Aboutmecopy/>
+      </div> */}
+      <div id="Works" className="">
         <Works/>
       </div>
+      {/* <div id="Works" className="hidden md:flex">
+        <Workscopy/>
+      </div> */}
+      
       <div id="Experience" className="">
         <Skills />
       </div>

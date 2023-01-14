@@ -1,9 +1,18 @@
 import React from "react"
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react"
+
+// Import Swiper styles
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
 import { motion } from "framer-motion"
-import { images } from "../constants"
 import Image from "next/image"
-import LineGradient from "./LineGradient"
 import Link from "next/link"
+import { Pagination, Navigation } from "swiper"
+
+import { images } from "../constants"
+import LineGradient from "./LineGradient"
 
 function Works() {
   const projectLinks = [
@@ -66,10 +75,20 @@ function Works() {
             <LineGradient width="w-full" />
           </div>
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-32 md:gap-20 md:px-4 ">
+        {images && <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className=" max-w-[1200px]"
+        >
           {projectLinks.map((link) => (
-            <div
-              className=" drop-shadow-2xl flex flex-col justify-between "
+            <SwiperSlide
+              className=" drop-shadow-2xl flex flex-col justify-between py-12 "
               key={link.title}
             >
               <div className="flex flex-col w-full ">
@@ -77,7 +96,7 @@ function Works() {
                   <Image
                     src={link.src}
                     alt="music"
-                    className="w-full  md:h-[480px] md:object-cover object-left-top rounded-2xl "
+                    className="w-full  md:h-[680px] md:object-cover object-left-top rounded-2xl "
                   />
                   <h1 className="py-8 mt-2 text-3xl font-semibold text-center md:text-start ">
                     {link.title}
@@ -107,9 +126,9 @@ function Works() {
                   Code
                 </Link>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>}
       </motion.nav>
     </section>
   )

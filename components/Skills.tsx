@@ -104,15 +104,15 @@ const Skills = () => {
         }}
         className="w-full md:min-h-screen  flex flex-col md:justify-center md:items-center  "
       >
-         <div className="pb-8 flex flex-col  md:justify-center items-center">
-          <div className="font-playfair font-semibold text-base md:text-4xl mb-24 ">
+         <div className=" flex flex-col  md:justify-center items-center">
+          <div className="font-playfair font-semibold text-base md:text-4xl mb-4 md:mb-24 ">
             <span className="text-gray-500">TECHNOLOGIES   </span>{" "}
             <span className="italic">I HAVE WORKED WITH</span>
             <LineGradient width="w-full" />
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-4">
           {items.map(({ id, src, title }) => {
             return (
               <div
@@ -126,8 +126,7 @@ const Skills = () => {
           })}
         </div>
       </motion.div>
-      <br />
-    </section>
+      </section>
   )
 }
 

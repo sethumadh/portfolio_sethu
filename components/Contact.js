@@ -5,6 +5,7 @@ import LineGradient from "./LineGradient"
 
 const Contact = () => {
   return (
+    <section className=" md:min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col items-center justify-center mt-28 ">
     <motion.div
       initial="hidden"
       whileInView="visible"
@@ -14,7 +15,7 @@ const Contact = () => {
         hidden: { opacity: 0, x: -50 },
         visible: { opacity: 1, x: 0 },
       }}
-      className=" w-[90%] max-w-[1800px] md:min-h-screen mx-auto  flex justify-center items-center py-12 p-4 mt-32"
+      className= "w-full md:min-h-screen  flex flex-col md:justify-center md:items-center  "
     >
       <form
         method="POST"
@@ -22,8 +23,8 @@ const Contact = () => {
         action="https://formsubmit.co/6f9a7e423a081cf9a5e13b663d5c1dc5 "
         className="flex flex-col max-w-[1050px] w-full"
       >
-        <div className="pb-8 flex flex-col  md:justify-center items-center">
-          <div className="font-playfair font-semibold text-base md:text-4xl mb-24">
+        <div className="flex flex-col  md:justify-center items-center">
+          <div className="font-playfair font-semibold text-base md:text-4xl mb-8 md:mb-24">
             <span className="text-gray-500">CONTACT   </span>{" "}
             <span className="italic">ME</span>
             <LineGradient />
@@ -55,6 +56,7 @@ const Contact = () => {
         </button>
       </form>
     </motion.div>
+     </section>
   )
 }
 
