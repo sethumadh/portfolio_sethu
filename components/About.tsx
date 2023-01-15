@@ -28,7 +28,7 @@ function About({ setActivePage }: AboutProps) {
       >
         <div className="md:w-2/5 w-full ">
           <Image
-            src={images.sethu}
+            src={images.sethuNewpic}
             alt="sethu"
             className="w-full object-cover"
           />

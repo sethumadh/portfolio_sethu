@@ -22,6 +22,7 @@ import musicplayer from "../assets/musicplayer.png"
 import filmpire from "../assets/filmpire.png"
 import passwordapp from "../assets/passwordapp.png"
 import carrental from "../assets/carrental.png"
+import sethuNewpic from "../assets/sethuNewpic.png"
 
 import contactProject from "../assets/contactProject.jpg"
 
@@ -50,5 +51,6 @@ export default {
   carrental,
   passwordapp,
   musicplayer,
-  filmpire
+  filmpire,
+  sethuNewpic
 }
