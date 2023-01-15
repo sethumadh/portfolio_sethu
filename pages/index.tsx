@@ -3,13 +3,19 @@ import Head from "next/head"
 import type { NextPage } from "next"
 
 import { Navbar } from "../components"
-import { NavigationDots, About, Contact, Skills, Footer } from "../components"
-import { images } from '../constants'
+import {
+  NavigationDots,
+  About,
+  Contactcopy,
+  Skills,
+  Footer,
+} from "../components"
+import { images } from "../constants"
 import Works from "../components/Works"
 import Aboutme from "../components/Aboutme"
-import Aboutmecopy from "../components/Aboutmecopy"
-import Workscopy from "../components/Workscopy"
-
+// import Aboutmecopy from "../components/Aboutmecopy"
+// import Workscopy from "../components/Workscopy"
+// import Contactcopy from "../components/Contactcopy"
 
 const Home: NextPage = () => {
   const [activePage, setActivePage] = useState("Home")
@@ -39,26 +45,24 @@ const Home: NextPage = () => {
           setActivePage={setActivePage}
           isTopOfPage={isTopOfPage}
         />
-        <About setActivePage={setActivePage}  />
+        <About setActivePage={setActivePage} />
       </div>
       <div id="About">
-        <Aboutme/>
+        <Aboutme />
       </div>
-      {/* <div id="Aboutmecopy">
-        <Aboutmecopy/>
-      </div> */}
+
       <div id="Works" className="">
-        <Works/>
+        <Works />
       </div>
       {/* <div id="Works" className="hidden md:flex">
         <Workscopy/>
       </div> */}
-      
+
       <div id="Experience" className="">
         <Skills />
       </div>
       <div id="Contact" className="">
-        <Contact />
+        <Contactcopy />
         <Footer />
       </div>
     </div>

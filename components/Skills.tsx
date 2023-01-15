@@ -92,7 +92,7 @@ const Skills = () => {
     },
   ]
   return (
-    <section className=" md:min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col items-center justify-center mt-28 ">
+    <section className=" md:min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col items-center justify-center mt-28  ">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -106,8 +106,8 @@ const Skills = () => {
       >
          <div className=" flex flex-col  md:justify-center items-center">
           <div className="font-playfair font-semibold text-base md:text-4xl mb-4 md:mb-24 ">
-            <span className="text-gray-500">TECHNOLOGIES   </span>{" "}
-            <span className="italic">I HAVE WORKED WITH</span>
+            <span className="text-gray-500 tracking-wider">TECHNOLOGIES   </span>{" "}
+            <span className="italic tracking-wider">I HAVE WORKED WITH</span>
             <LineGradient width="w-full" />
           </div>
         </div>
@@ -119,7 +119,7 @@ const Skills = () => {
                 className="shadow-md shadow-[#040c16] hover:scale-110 duration-500"
                 key={id}
               >
-                <Image src={src} alt={"tech"} className="w-20 mx-auto" />
+                <Image src={src} alt={"tech"} className="w-20 mx-auto pt-4" />
                 <p className="my-4">{title}</p>
               </div>
             )

@@ -68,15 +68,15 @@ function Aboutme() {
         <div className="flex flex-col">
           <div className="flex items-center justify-center">
             <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-12 md:mb-24">
-              <span className="text-gray-500">WHY</span>{" "}
-              <span className="italic">HIRE ME</span>
+              <span className="text-gray-500 tracking-wider">WHY</span>{" "}
+              <span className="italic tracking-wider">HIRE ME</span>
               <LineGradient width="w-full" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-8 w-full md:w-full  ">
             {serviceLinks.map((link) => (
               <div
-                className={`border-8 border-none grid-flow-row shadow-lg shadow-slate-700 rounded-lg h-48 px-4 mx-4 py-4 ${link.style} hover:scale-105 transition duration-150`}
+                className={`border-8 border-none grid-flow-row shadow-lg shadow-slate-700 rounded-lg h-56 px-4 mx-4 py-4 ${link.style} hover:scale-105 transition duration-150`}
                 key={link.id}
               >
                 <div className=" mx-auto max-w-max  font-bold text-lg  md:text-3xl  mb-8 text-slate-600 border-b-4  border-b-slate-300 ">
@@ -92,12 +92,12 @@ function Aboutme() {
           </div>
           <div className="flex items-center justify-center mt-32">
             <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-12 md:mb-24">
-              <span className="text-gray-500">MY</span>{" "}
-              <span className="italic">STRENGTHS</span>
+              <span className="text-gray-500 tracking-wider">MY</span>{" "}
+              <span className="italic tracking-wider">STRENGTHS</span>
               <LineGradient width="w-full" />
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-6 grid-flow-row auto-rows-max gap-4 md:gap-8 w-full md:w-full">
+          <div className="grid grid-cols-1 md:grid-cols-6 grid-flow-row auto-rows-max gap-4 md:gap-8 w-full md:w-full ">
             {strengthLinks.map((link) => (
               <div
                 className={`border-8 border-none grid-flow-row shadow-lg shadow-slate-700 rounded-lg h-56 px-4 py-4 ${link.style} hover:scale-105 transition duration-150`}

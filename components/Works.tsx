@@ -61,8 +61,8 @@ function Works() {
       >
         <div className="flex items-center justify-center">
           <div className="font-playfair font-semibold text-base md:text-4xl md:text-start mb-4 md:mb-24">
-            <span className="text-gray-500">MY</span>{" "}
-            <span className="italic">PROJECTS</span>
+            <span className="text-gray-500 tracking-wider">MY</span>{" "}
+            <span className="italic tracking-wider">PROJECTS</span>
             <LineGradient width="w-full" />
           </div>
         </div>
@@ -95,14 +95,14 @@ function Works() {
                 <Link
                   href={link.liveUrl}
                   target="_blank"
-                  className="mx-4 text-center font-semibold text-lg bg-gradient-to-r from-slate-500 w-full md:w-1/3 px-4 py-2 rounded-lg hover:bg-blue hover:text-gray-600"
+                  className="mx-4 text-center font-semibold text-lg bg-gradient-to-r from-slate-500 to-gray-500  w-full md:w-1/3 px-4 py-2 rounded-lg hover:bg-blue hover:text-gray-600"
                 >
                   Demo
                 </Link>
                 <Link
                   href={link.gitUrl}
                   target="_blank"
-                  className="mx-4 text-center font-semibold text-lg bg-gradient-to-r from-white w-full md:w-1/3 px-4 py-2 rounded-lg hover:bg-blue hover:text-gray-600"
+                  className="mx-4 text-center font-semibold text-lg bg-gradient-to-r from-white to to-[#FAF9F6] w-full md:w-1/3 px-4 py-2 rounded-lg hover:bg-blue hover:text-gray-600"
                 >
                   Code
                 </Link>

@@ -27,7 +27,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
         hidden: { opacity: 0, x: -50 },
         visible: { opacity: 1, x: 0 },
       }}
-      className={`navbar max-w-[90%] w-[1800px] mx-auto fixed top-0 right-0 left-0 bg-hero z-20 flex flex-row items-center justify-between  px-2 py-6 md:py-2 transition duration-150 bg-${dynamicNavbarBG} `}
+      className={`navbar w-full mx-auto fixed top-0 right-0 left-0 bg-hero z-20 flex flex-row items-center justify-between px-8  md:px-24 py-4 md:py-4 transition duration-150 bg-${dynamicNavbarBG} `}
     >
       <div className="md:text-6xl text-2xl font-playfair font-semibold cursor-pointer">
         <Link to="Home" smooth={true} offset={50} duration={500}>
@@ -69,7 +69,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
         <motion.div
           whileInView={{ x: [200, 0] }}
           transition={{ duration: 0.85, ease: "easeOut" }}
-          className="md:hidden flex flex-col fixed right-0 bottom-0 h-full bg-slate-200 w-[200px] p-2"
+          className="md:hidden flex flex-col fixed right-0 bottom-0 h-full bg-slate-200 w-[200px] p-2 bg-navbg bg-repeat"
         >
           <div className="cursor-pointer z-20 text-slate-700 flex justify-end">
             <FaTimes size={30} onClick={() => setToggleMenu(!toggleMenu)} />
@@ -79,7 +79,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
             {links.map((link, i) => (
               <li
                 key={i}
-                className=" cursor-pointer capitalize font-medium hover:scale-105 duration-250 z-20"
+                className=" cursor-pointer capitalize font-medium hover:scale-105 duration-250 z-20 "
               >
                 <Link
                   to={link}
