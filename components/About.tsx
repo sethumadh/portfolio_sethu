@@ -4,6 +4,7 @@ import { Link } from "react-scroll"
 import { Dispatch, SetStateAction } from "react"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md"
 import Image from "next/image"
+import { FcBinoculars } from "react-icons/fc"
 
 import Socialmedia from "./Socialmedia"
 import { images } from "../constants"
@@ -35,24 +36,29 @@ function About({ setActivePage }: AboutProps) {
         </div>
         <div className=" flex flex-col justify-center items-center px-4 h-full">
           <div className="max-w-[1000px] mx-auto w-full grid sm:grid-cols-2 gap-8 px-4  mb-8 md:mb-24">
-            <div className="sm:text-right md:text-6xl text-2xl font-bold text-opaque-black">
+            <div className="sm:text-right md:text-6xl text-2xl font-bold text-gray-700   ">
               <p>
-                Hi. I'm <span className="italic text-gray-700">Sethumadhavan</span>, nice to meet you. Please take a look
-                around.
+                Hi. I'm{" "}
+                <span className="italic text-deep-blue">Sethumadhavan</span>,
+                nice to <span className="italic text-deep-blue">meet you.</span>{" "}
+                Please take a look around.
+                <span className="flex justify-end">
+                  <FcBinoculars className="" />
+                </span>
               </p>
             </div>
-            <div className=" text-lg md:text-[24px] flex justify-center items-end text-opaque-black font-bold">
+            <div className=" text-lg md:text-[24px] flex justify-center items-end text-gray-700 font-bold leading-relaxed">
               <p>
-                I am a passionate Full-Stack software engineer and a code enthusiast
-                with experience in building applications by writing clean,
-                stable code. Active learner always keen for new knowledge and
-                find solutions whle facing new difficulties. A developer good at
-                collaborating and communicating with others, who plays vital
-                role among teams.
+                I am a passionate Full-Stack software engineer and a code
+                enthusiast with experience in building applications by writing
+                clean, stable code. Active learner always keen for new knowledge
+                and find solutions whle facing new difficulties. A developer
+                good at collaborating and communicating with others, who plays
+                vital role among teams.
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row  justify-center   text-center w-full">
+          <div className="flex flex-col md:flex-row  justify-center items-center text-center w-full">
             <Link
               to={`Works`}
               smooth={true}

@@ -2,8 +2,32 @@ import React from "react"
 import { motion } from "framer-motion"
 
 import LineGradient from "./LineGradient"
+import Image from "next/image"
+import { images } from "../constants"
 
 function Aboutme() {
+  const testimonialLinks = [
+    {
+      src: images.cyril,
+      name:"Emmanuel Cyril",
+      title: " Lead Software Engineer",
+      body: "'During my time at The JSM Masterclass Experience, I had the great fortune to work alongside Sethumadhavan. He's ability to think creatively and devise novel approaches to fixing bugs in code is awe-inspiring. Sethumadhavan is dogged and thorough when it comes to fixing bugs. Sethumadhavan will be a great addition to any group he joins. In addition to giving Sethumadhavan my highest recommendation, I am also pleased to call him a friend.'",
+    },
+    {
+      src: images.adrian,
+      name:"Adrian Hadjin",
+      title: " Founder & CEO - JavaScript Mastery",
+      title1: " Founder & CEO",
+      sub: "JavaScript Mastery",
+      body: "I am happy to recommend Sethumadhavan Kochukrishnan for his exceptional skills as a Full-Stack software engineer. Throughout my time with him on open-source projects, I was consistently impressed by his passion for code and ability to write clean, stable code. Seth is not only an active learner who is always eager to learn new knowledge but also someone who can find solutions when facing new difficulties. He is an excellent collaborator and communicator and played a vital role in our team. I highly recommend Seth for software engineering opportunities, and I am confident he will be a valuable asset to any team.",
+    },
+    {
+      src: images.ahsan,
+      name:"Ahsan Syed",
+      title: " Full Stack Software Developer",
+      body: "During my time working on CarRental, I had the pleasure of working alongside Sethu. I was impressed by his ability to communicate his problems and in the same breath find the solution to it. Sethu is more than capable of writing clean and effective code. Sethu has great understanding of Javascript and React hooks and has the trait of a developer who goes beyond. I highly recommend Sethu because I believe he would make a fine addition to anyone's team.",
+    },
+  ]
   const serviceLinks = [
     {
       title: "UI/UX Design",
@@ -55,7 +79,7 @@ function Aboutme() {
     <section
       className={`works md:min-h-screen max-w-[90%] w-[1800px] mx-auto mt-28`}
     >
-      <motion.nav
+      <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -112,8 +136,42 @@ function Aboutme() {
               </div>
             ))}
           </div>
+          <div className=" flex flex-col justify-center items-center mt-32 ">
+            <div className="flex items-center justify-center  ">
+              <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-12 md:mb-24">
+                <span className="text-gray-500 tracking-wider">MY</span>{" "}
+                <span className="italic tracking-wider">TESTIMONIALS</span>
+                <LineGradient width="w-full" />
+              </div>
+            </div>
+            <div className=" flex flex-col md:flex-row md:flex-wrap ">
+              {testimonialLinks.map((link, i) => (
+                <div
+                  className="group flex-1 shadow-lg shadow-slate-700 flex flex-col justify-start items-center px-4 py-4 rounded"
+                  key={i}
+                >
+                  <div className="h-1/3 flex flex-col justify-center items-center mb-6 md:mb-12 group-hover:scale-105 transition duration-150 ">
+                    <Image
+                      src={link.src}
+                      alt="profilpictureoftest"
+                      className="rounded-full w-36 h-[144px] flex justify-center items-center mb-2"
+                    />
+                    <h1 className="font-semibold text-xl mt-1 group-hover:scale-105 transition duration-150 ">{link.name}</h1>
+                    <h1 className="font-semibold text-xl mt-1 hidden md:block group-hover:scale-105 transition duration-150 ">{link.title}</h1>
+                    <h1 className="font-semibold text-xl mt-1 md:hidden group-hover:scale-105 transition duration-150 ">{link.title1}</h1>
+                    <h1 className="font-semibold text-xl mt-1 md:hidden group-hover:scale-105 transition duration-150 ">{link.sub}</h1>
+                  </div>
+                  <div className=" h-full">
+                    <p className="font-semibold text-lg italic text-center group-hover:scale-105 transition duration-150 ">
+                      {link.body}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </motion.nav>
+      </motion.div>
     </section>
   )
 }

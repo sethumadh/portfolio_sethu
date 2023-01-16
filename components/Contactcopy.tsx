@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { images } from "../constants"
-import Image from "next/image"
+import { FcPhone, FcHome } from "react-icons/fc"
+
 import LineGradient from "./LineGradient"
 import Socialmedia from "./Socialmedia"
 
@@ -57,8 +57,24 @@ const Contactcopy = () => {
           <button className=" border-2 bg-slate-400 rounded-lg font-semibold hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center ">
             Submit
           </button>
+          <div className="flex flex-col justify-center items-center">
+            <div className=" border-8  flex ">
+              {" "}
+              <FcPhone className="border-8 " size={40} />
+              <h1 className="text-lg font-bold flex justify-center items-center">
+                +61432844617
+              </h1>
+            </div>
+            <div className=" flex justify-between ">
+              {" "}
+              <FcHome className="hidden md:flex" size={30} />
+              <h1 className="text-lg font-bold flex justify-center items-center text-center ml-2">
+                1728, 8 Gillingham Street, Woollongabba, QLD-4102 , Australia
+              </h1>
+            </div>
+          </div>
         </form>
-        
+
         <Socialmedia />
       </motion.nav>
     </section>

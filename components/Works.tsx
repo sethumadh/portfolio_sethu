@@ -1,9 +1,11 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { images } from "../constants"
 import Image from "next/image"
-import LineGradient from "./LineGradient"
 import Link from "next/link"
+
+
+import { images } from "../constants"
+import LineGradient from "./LineGradient"
 
 function Works() {
   const projectLinks = [
@@ -47,7 +49,7 @@ function Works() {
   ]
   return (
     <section
-      className={`works md:min-h-screen max-w-[90%] w-[1800px] mx-auto mt-28`}
+      className={`works md:min-h-screen max-w-[90%] w-[1800px] mx-auto mt-28 md:mt-44 md:pt-12`}
     >
       <motion.nav
         initial="hidden"
@@ -69,11 +71,11 @@ function Works() {
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-32 md:gap-20 md:px-4 ">
           {projectLinks.map((link) => (
             <div
-              className=" drop-shadow-2xl flex flex-col justify-between "
+              className=" drop-shadow-2xl flex flex-col justify-between group "
               key={link.title}
             >
               <div className="flex flex-col w-full ">
-                <div className="mt-4 flex flex-col ">
+                <div className="mt-4 flex flex-col group-hover:scale-105 transition duration-150: ">
                   <Image
                     src={link.src}
                     alt="music"
@@ -91,7 +93,7 @@ function Works() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row  items-center justify-center">
+              <div className="flex flex-row  items-center justify-center md:mt-3">
                 <Link
                   href={link.liveUrl}
                   target="_blank"
