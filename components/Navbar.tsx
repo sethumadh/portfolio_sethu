@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import { Dispatch, SetStateAction } from "react"
 import { Link } from "react-scroll"
 
+import { useScrollDirection } from "./hook/useScrollDirection"
+
 type NavbarProps = {
   activePage: string
   setActivePage: Dispatch<SetStateAction<string>>
@@ -11,11 +13,12 @@ type NavbarProps = {
 }
 const links = ["Home", "About", "Works", "Experience", "Contact"]
 function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
+  const scrollDirection=useScrollDirection()
   const [toggleMenu, setToggleMenu] = useState(false)
   const dynamicNavbarBG = !isTopOfPage
     ? "[#FFFAE9] shadow-md shadow-slate-400 "
     : ""
-  console.log(isTopOfPage, dynamicNavbarBG)
+  console.log(scrollDirection)
 
   return (
     <motion.nav
@@ -27,9 +30,9 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
         hidden: { opacity: 0, x: -50 },
         visible: { opacity: 1, x: 0 },
       }}
-      className={`navbar w-full mx-auto fixed top-0 right-0 left-0 bg-hero z-20 flex flex-row items-center justify-between px-8  md:px-24 py-4 md:py-4 transition duration-150 bg-${dynamicNavbarBG} `}
+      className={`navbar h-24 w-full mx-auto fixed top-0 right-0 left-0 bg-hero z-20 flex flex-row items-center justify-between px-8  md:px-24 py-4 md:py-4 transition duration-150 bg-${dynamicNavbarBG} ${scrollDirection=="down"?"hidden":"flex"} transition-transform duration-150`}
     >
-      <div className="md:text-6xl text-2xl font-playfair font-semibold cursor-pointer">
+      <div className="md:text-6xl text-2xl font-playfair font-semibold cursor-pointer md:mr-12 ">
         <Link to="Home" smooth={true} offset={50} duration={500}>
           <h1>SM</h1>
         </Link>

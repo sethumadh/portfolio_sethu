@@ -14,7 +14,6 @@ type AboutProps = {
 }
 
 function About({ setActivePage }: AboutProps) {
- 
   return (
     <section className="pt-24 md:pt-0 md:min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col  items-center justify-center ">
       <motion.div
@@ -32,15 +31,12 @@ function About({ setActivePage }: AboutProps) {
           <div className="max-w-[1000px] mx-auto w-full grid sm:grid-cols-2 gap-8 px-4  mb-8 md:mb-24">
             <div className="sm:text-right md:text-6xl text-2xl font-bold text-gray-700  flex items-center ">
               <p className="">
-                Hi. I am {" "}
+                Hi. I am{" "}
                 <span className="italic text-deep-blue">Sethumadhavan</span>,
                 nice to{" "}
-                <span className="italic text-deep-blue ">
-                  meet you.
-                </span>{" "}
-                Please take a look around.{" "}
+                <span className="italic text-deep-blue ">meet you.</span> Please
+                take a look around.{" "}
               </p>
-              
             </div>
             <div className=" w-full h-full ">
               <Image
@@ -56,10 +52,11 @@ function About({ setActivePage }: AboutProps) {
               smooth={true}
               offset={50}
               duration={500}
-              onClick={() => setActivePage("Contact")}
-              className="cursor-pointer w-2/3 mb-2 md:mr-4 md:w-1/4  h-12 bg-gradient-rainblue text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+              onClick={() => setActivePage("Works")}
+              className=" cursor-pointer  mb-2 md:mr-4 md:w-1/4 flex justify-center items-center bg-gradient-rainblue text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
             >
-              My Works
+              <h1 className="md:text-xl"> See My Works</h1>
+              <div className="group-hover:rotate-90 transition duration-200"></div>
             </Link>
             <Link
               to={`Contact`}
@@ -71,9 +68,9 @@ function About({ setActivePage }: AboutProps) {
               offset={50}
               duration={500}
               onClick={() => setActivePage("Contact")}
-              className="group flex flex-row h-12 w-2/3 md:w-1/4 justify-center items-center  text-center cursor-pointer bg-gray-300  text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue  transition duration-500"
+              className="group flex flex-row w-2/3 md:w-1/4 justify-center items-center  text-center cursor-pointer bg-gray-300  text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue  transition duration-500"
             >
-              <h1 className="">Download CV</h1>
+              <h1 className="md:text-xl">Download CV</h1>
               <div className="group-hover:rotate-90 transition duration-200">
                 <MdOutlineKeyboardArrowRight size={20} />
               </div>

@@ -105,9 +105,9 @@ const Skills = () => {
         className="w-full md:min-h-screen  flex flex-col md:justify-center md:items-center  "
       >
          <div className=" flex flex-col  md:justify-center items-center">
-          <div className="font-playfair font-semibold text-base md:text-4xl mb-4 md:mb-24 ">
-            <span className="text-gray-500 tracking-wider">TECHNOLOGIES   </span>{" "}
-            <span className="italic tracking-wider">I HAVE WORKED WITH</span>
+          <div className="font-playfair font-semibold text-lg md:text-4xl mb-4 md:mb-24 ">
+            <span className="text-gray-500 tracking-wider">MY  </span>{" "}
+            <span className="italic tracking-wider">TECHNOLOGIES</span>
             <LineGradient width="w-full" />
           </div>
         </div>

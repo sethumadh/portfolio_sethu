@@ -27,7 +27,7 @@ const Contactcopy = () => {
           className="flex flex-col max-w-[1050px] w-full mx-auto"
         >
           <div className="flex flex-col  md:justify-center items-center">
-            <div className="font-playfair font-semibold text-base md:text-4xl  mb-8 md:mb-24">
+            <div className="font-playfair font-semibold text-lg md:text-4xl  mb-8 md:mb-24">
               <span className="text-gray-500 tracking-wider">CONTACT </span>{" "}
               <span className="italic tracking-wider">ME</span>
               <LineGradient width="w-full" />

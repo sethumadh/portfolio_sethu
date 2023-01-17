@@ -20,6 +20,7 @@ function Aboutme() {
       href: "https://www.linkedin.com/in/emmacyril/",
       name: "Emmanuel Cyril",
       title: " Lead Software Engineer",
+      title1: " Lead Software Engineer",
       smallContent:
         "'During my time at The JSM Masterclass Experience, I had the great fortune to work alongside Sethumadhavan. He's ability to think creatively and devise novel approaches to fixing bugs in code is awe-inspiring. Sethumadhavan",
       extraContent:
@@ -46,6 +47,7 @@ function Aboutme() {
       href: "https://www.linkedin.com/in/ahsan-syed-7b26b41a4/",
       name: "Ahsan Syed",
       title: " Full Stack Software Developer",
+      title1: " Full Stack Software Developer",
       smallContent:
         "During my time working on CarRental, I had the pleasure of working alongside Sethu. I was impressed by his ability to communicate his problems and in the same breath find the solution to it. Sethu",
       extraContent:
@@ -177,18 +179,16 @@ function Aboutme() {
             </div>
             <div className=" flex flex-col md:flex-row md:flex-wrap ">
               {testimonialLinks.map((link, i) => (
-                <div key={i} className=" shadow-lg shadow-slate-700 cursor-pointer h-1/3 flex flex-col justify-center items-center mb-6 md:mb-12 group-hover:scale-105 transition duration-150">
-                  <Image
-                    src={link.src}
-                    alt="profilpictureoftest"
-                    className="rounded-full w-36 h-[144px] flex justify-center items-center mb-2"
-                  />
-                  <Link
-                    href={link.href}
-                    target="_blank"
-                    className="group flex-1  flex flex-col justify-start items-center px-4 py-4 rounded"
-                    
-                  >
+                <div
+                  className="group flex-1 shadow-lg shadow-slate-700 flex flex-col justify-start items-center px-4 py-4 rounded"
+                  key={i}
+                >
+                  <Link href={link.href} target="_blank" className="cursor-pointer h-1/3 flex flex-col justify-center items-center mb-6 md:mb-12 group-hover:scale-105 transition duration-150">
+                    <Image
+                      src={link.src}
+                      alt="profilpictureoftest"
+                      className="rounded-full w-36 h-[144px] flex justify-center items-center mb-2"
+                    />
                     <h1 className="font-semibold text-xl mt-1">{link.name}</h1>
                     <h1 className="font-semibold text-xl mt-1 hidden md:block">
                       {link.title}

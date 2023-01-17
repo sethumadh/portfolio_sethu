@@ -63,7 +63,7 @@ function Works() {
         }}
       >
         <div className="flex items-center justify-center">
-          <div className="font-playfair font-semibold text-base md:text-4xl md:text-start mb-4 md:mb-24">
+          <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-4 md:mb-24">
             <span className="text-gray-500 tracking-wider">MY</span>{" "}
             <span className="italic tracking-wider">PROJECTS</span>
             <LineGradient width="w-full" />
