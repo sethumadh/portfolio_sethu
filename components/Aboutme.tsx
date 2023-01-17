@@ -1,31 +1,55 @@
-import React from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
+import { FcApprove, FcAlarmClock } from "react-icons/fc"
 
 import LineGradient from "./LineGradient"
 import Image from "next/image"
 import { images } from "../constants"
+import Link from "next/link"
 
 function Aboutme() {
+  const [readMoreT1, setreadMoreT1] = useState(false)
+  const [readMoreT2, setreadMoreT2] = useState(false)
+  const [readMoreT3, setreadMoreT3] = useState(false)
+
   const testimonialLinks = [
     {
       src: images.cyril,
-      name:"Emmanuel Cyril",
+      readMore: readMoreT1,
+      setReadmore: setreadMoreT1,
+      href: "https://www.linkedin.com/in/emmacyril/",
+      name: "Emmanuel Cyril",
       title: " Lead Software Engineer",
-      body: "'During my time at The JSM Masterclass Experience, I had the great fortune to work alongside Sethumadhavan. He's ability to think creatively and devise novel approaches to fixing bugs in code is awe-inspiring. Sethumadhavan is dogged and thorough when it comes to fixing bugs. Sethumadhavan will be a great addition to any group he joins. In addition to giving Sethumadhavan my highest recommendation, I am also pleased to call him a friend.'",
+      smallContent:
+        "'During my time at The JSM Masterclass Experience, I had the great fortune to work alongside Sethumadhavan. He's ability to think creatively and devise novel approaches to fixing bugs in code is awe-inspiring. Sethumadhavan",
+      extraContent:
+        " is dogged and thorough when it comes to fixing bugs. Sethumadhavan will be a great addition to any group he joins. In addition to giving Sethumadhavan my highest recommendation, I am also pleased to call him a friend.",
     },
     {
       src: images.adrian,
-      name:"Adrian Hadjin",
+      readMore: readMoreT2,
+      setReadmore: setreadMoreT2,
+      href: "https://www.linkedin.com/in/adrianhajdin/",
+      name: "Adrian Hadjin",
       title: " Founder & CEO - JavaScript Mastery",
       title1: " Founder & CEO",
       sub: "JavaScript Mastery",
-      body: "I am happy to recommend Sethumadhavan Kochukrishnan for his exceptional skills as a Full-Stack software engineer. Throughout my time with him on open-source projects, I was consistently impressed by his passion for code and ability to write clean, stable code. Seth is not only an active learner who is always eager to learn new knowledge but also someone who can find solutions when facing new difficulties. He is an excellent collaborator and communicator and played a vital role in our team. I highly recommend Seth for software engineering opportunities, and I am confident he will be a valuable asset to any team.",
+      smallContent:
+        "I am happy to recommend Sethumadhavan Kochukrishnan for his exceptional skills as a Full-Stack software engineer. Throughout my time with him on open-source projects, I was consistently impressed by Sethu's",
+      extraContent:
+        " passion for code and ability to write clean, stable code. Seth is not only an active learner who is always eager to learn new knowledge but also someone who can find solutions when facing new difficulties. He is an excellent collaborator and communicator and played a vital role in our team. I highly recommend Seth for software engineering opportunities, and I am confident he will be a valuable asset to any team",
     },
     {
       src: images.ahsan,
-      name:"Ahsan Syed",
+      readMore: readMoreT3,
+      setReadmore: setreadMoreT3,
+      href: "https://www.linkedin.com/in/ahsan-syed-7b26b41a4/",
+      name: "Ahsan Syed",
       title: " Full Stack Software Developer",
-      body: "During my time working on CarRental, I had the pleasure of working alongside Sethu. I was impressed by his ability to communicate his problems and in the same breath find the solution to it. Sethu is more than capable of writing clean and effective code. Sethu has great understanding of Javascript and React hooks and has the trait of a developer who goes beyond. I highly recommend Sethu because I believe he would make a fine addition to anyone's team.",
+      smallContent:
+        "During my time working on CarRental, I had the pleasure of working alongside Sethu. I was impressed by his ability to communicate his problems and in the same breath find the solution to it. Sethu",
+      extraContent:
+        " is more than capable of writing clean and effective code. Sethu has great understanding of Javascript and React hooks and has the trait of a developer who goes beyond. I highly recommend Sethu because I believe he would make a fine addition to anyone's team",
     },
   ]
   const serviceLinks = [
@@ -82,7 +106,7 @@ function Aboutme() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: -50 },
@@ -91,10 +115,17 @@ function Aboutme() {
       >
         <div className="flex flex-col">
           <div className="flex items-center justify-center">
-            <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-12 md:mb-24">
-              <span className="text-gray-500 tracking-wider">WHY</span>{" "}
-              <span className="italic tracking-wider">HIRE ME</span>
-              <LineGradient width="w-full" />
+            <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-12 md:mb-24 flex">
+              <div>
+                {" "}
+                <span className="text-gray-500 tracking-wider">WHY</span>{" "}
+                <span className="italic tracking-wider">HIRE ME</span>
+                <LineGradient width="w-full" />
+              </div>
+
+              <div className="flex items-center">
+                <FcApprove />
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-8 w-full md:w-full  ">
@@ -136,7 +167,7 @@ function Aboutme() {
               </div>
             ))}
           </div>
-          <div className=" flex flex-col justify-center items-center mt-32 ">
+          <div className=" flex flex-col justify-center items-center mt-8 md:mt-16 py-4 ">
             <div className="flex items-center justify-center  ">
               <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-12 md:mb-24">
                 <span className="text-gray-500 tracking-wider">MY</span>{" "}
@@ -146,24 +177,40 @@ function Aboutme() {
             </div>
             <div className=" flex flex-col md:flex-row md:flex-wrap ">
               {testimonialLinks.map((link, i) => (
-                <div
-                  className="group flex-1 shadow-lg shadow-slate-700 flex flex-col justify-start items-center px-4 py-4 rounded"
-                  key={i}
-                >
-                  <div className="h-1/3 flex flex-col justify-center items-center mb-6 md:mb-12 group-hover:scale-105 transition duration-150 ">
-                    <Image
-                      src={link.src}
-                      alt="profilpictureoftest"
-                      className="rounded-full w-36 h-[144px] flex justify-center items-center mb-2"
-                    />
-                    <h1 className="font-semibold text-xl mt-1 group-hover:scale-105 transition duration-150 ">{link.name}</h1>
-                    <h1 className="font-semibold text-xl mt-1 hidden md:block group-hover:scale-105 transition duration-150 ">{link.title}</h1>
-                    <h1 className="font-semibold text-xl mt-1 md:hidden group-hover:scale-105 transition duration-150 ">{link.title1}</h1>
-                    <h1 className="font-semibold text-xl mt-1 md:hidden group-hover:scale-105 transition duration-150 ">{link.sub}</h1>
-                  </div>
-                  <div className=" h-full">
-                    <p className="font-semibold text-lg italic text-center group-hover:scale-105 transition duration-150 ">
-                      {link.body}
+                <div key={i} className=" shadow-lg shadow-slate-700 cursor-pointer h-1/3 flex flex-col justify-center items-center mb-6 md:mb-12 group-hover:scale-105 transition duration-150">
+                  <Image
+                    src={link.src}
+                    alt="profilpictureoftest"
+                    className="rounded-full w-36 h-[144px] flex justify-center items-center mb-2"
+                  />
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    className="group flex-1  flex flex-col justify-start items-center px-4 py-4 rounded"
+                    
+                  >
+                    <h1 className="font-semibold text-xl mt-1">{link.name}</h1>
+                    <h1 className="font-semibold text-xl mt-1 hidden md:block">
+                      {link.title}
+                    </h1>
+                    <h1 className="font-semibold text-xl mt-1 md:hidden">
+                      {link.title1}
+                    </h1>
+                    <h1 className="font-semibold text-xl mt-1 md:hidden">
+                      {link.sub}
+                    </h1>
+                  </Link>
+                  <div className=" h-full group-hover:scale-105 transition duration-150">
+                    <p className="font-semibold text-lg italic text-center leading-relaxed tracking-wide ">
+                      {link.smallContent}
+
+                      <span>{link.readMore && link.extraContent}</span>
+                      <div
+                        className="cursor-pointer underline text-blue"
+                        onClick={() => link.setReadmore(!link.readMore)}
+                      >
+                        {link.readMore ? "Read Less" : "Read More"}
+                      </div>
                     </p>
                   </div>
                 </div>

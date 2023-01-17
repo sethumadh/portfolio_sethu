@@ -13,7 +13,7 @@ const Contactcopy = () => {
       <motion.nav
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: -50 },
@@ -58,9 +58,9 @@ const Contactcopy = () => {
             Submit
           </button>
           <div className="flex flex-col justify-center items-center">
-            <div className=" border-8  flex ">
+            <div className="flex ">
               {" "}
-              <FcPhone className="border-8 " size={40} />
+              <FcPhone className="" size={30} />
               <h1 className="text-lg font-bold flex justify-center items-center">
                 +61432844617
               </h1>
@@ -74,9 +74,8 @@ const Contactcopy = () => {
             </div>
           </div>
         </form>
-
-        <Socialmedia />
       </motion.nav>
+      <Socialmedia /> 
     </section>
   )
 }

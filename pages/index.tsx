@@ -13,9 +13,7 @@ import {
 import { images } from "../constants"
 import Works from "../components/Works"
 import Aboutme from "../components/Aboutme"
-// import Aboutmecopy from "../components/Aboutmecopy"
 // import Workscopy from "../components/Workscopy"
-// import Contactcopy from "../components/Contactcopy"
 
 const Home: NextPage = () => {
   const [activePage, setActivePage] = useState("Home")
@@ -54,7 +52,7 @@ const Home: NextPage = () => {
       <div id="Works" className="">
         <Works />
       </div>
-      {/* <div id="Works" className="hidden md:flex">
+      {/* <div id="Works1" className="hidden md:flex">
         <Workscopy/>
       </div> */}
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-scroll"
 import { Dispatch, SetStateAction } from "react"
@@ -14,6 +14,7 @@ type AboutProps = {
 }
 
 function About({ setActivePage }: AboutProps) {
+ 
   return (
     <section className="pt-24 md:pt-0 md:min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col  items-center justify-center ">
       <motion.div
@@ -27,35 +28,26 @@ function About({ setActivePage }: AboutProps) {
         }}
         className=" flex flex-col md:justify-evenly items-end md:flex-row-reverse w-full space-y-12 md:space-y-0"
       >
-        <div className="md:w-1/4 w-full h-full ">
-          <Image
-            src={images.sethuNewpic}
-            alt="sethu"
-            className="w-full h-full"
-          />
-        </div>
         <div className=" flex flex-col justify-center items-center px-4 h-full">
           <div className="max-w-[1000px] mx-auto w-full grid sm:grid-cols-2 gap-8 px-4  mb-8 md:mb-24">
-            <div className="sm:text-right md:text-6xl text-2xl font-bold text-gray-700   ">
-              <p>
-                Hi. I'm{" "}
+            <div className="sm:text-right md:text-6xl text-2xl font-bold text-gray-700  flex items-center ">
+              <p className="">
+                Hi. I am {" "}
                 <span className="italic text-deep-blue">Sethumadhavan</span>,
-                nice to <span className="italic text-deep-blue">meet you.</span>{" "}
-                Please take a look around.
-                <span className="flex justify-end">
-                  <FcBinoculars className="" />
-                </span>
+                nice to{" "}
+                <span className="italic text-deep-blue ">
+                  meet you.
+                </span>{" "}
+                Please take a look around.{" "}
               </p>
+              
             </div>
-            <div className=" text-lg md:text-[24px] flex justify-center items-end text-gray-700 font-bold leading-relaxed">
-              <p>
-                I am a passionate Full-Stack software engineer and a code
-                enthusiast with experience in building applications by writing
-                clean, stable code. Active learner always keen for new knowledge
-                and find solutions whle facing new difficulties. A developer
-                good at collaborating and communicating with others, who plays
-                vital role among teams.
-              </p>
+            <div className=" w-full h-full ">
+              <Image
+                src={images.sethuNewpic}
+                alt="sethu"
+                className="md:w-full md:h-full rounded-full md:rounded-none w-60 h-60 object-cover object-top mx-auto"
+              />
             </div>
           </div>
           <div className="flex flex-col md:flex-row  justify-center items-center text-center w-full">
