@@ -6,7 +6,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md"
 import Image from "next/image"
 import { FcBinoculars } from "react-icons/fc"
 
-import Socialmedia from "./Socialmedia"
+// import Socialmedia from "./Socialmedia"
 import { images } from "../constants"
 
 type AboutProps = {
@@ -15,7 +15,7 @@ type AboutProps = {
 
 function About({ setActivePage }: AboutProps) {
   return (
-    <section className="pt-24 md:pt-0 md:min-h-screen max-w-[90%] w-[1800px] mx-auto flex flex-col  items-center justify-center ">
+    <section className="pt-24 md:pt-0 md:h-screen  flex flex-col  items-center justify-center bg-mainbg1 bg-no-repeat ">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -25,10 +25,10 @@ function About({ setActivePage }: AboutProps) {
           hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
         }}
-        className=" flex flex-col md:justify-evenly items-end md:flex-row-reverse w-full space-y-12 md:space-y-0"
+        className=" flex flex-col max-w-[90%] w-[1800px] mx-auto md:justify-evenly items-end md:flex-row-reverse  space-y-12 md:space-y-0"
       >
         <div className=" flex flex-col justify-center items-center px-4 h-full">
-          <div className="max-w-[1000px] mx-auto w-full grid sm:grid-cols-2 gap-8 px-4  mb-8 md:mb-24">
+          <div className="max-w-[1000px] mx-auto w-full grid md:grid-cols-2 gap-8 px-4  mb-8 md:mb-24">
             <div className="sm:text-right md:text-6xl text-2xl font-bold text-gray-700  flex items-center ">
               <p className="">
                 Hi. I am{" "}
@@ -46,14 +46,14 @@ function About({ setActivePage }: AboutProps) {
               />
             </div>
           </div>
-          <div className="flex flex-col md:flex-row  justify-center items-center text-center w-full">
+          <div className="flex flex-col md:flex-row  justify-center items-center text-center w-full ">
             <Link
               to={`Works`}
               smooth={true}
               offset={50}
               duration={500}
               onClick={() => setActivePage("Works")}
-              className=" cursor-pointer  mb-2 md:mr-4 md:w-1/4 flex justify-center items-center bg-gradient-rainblue text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+              className="group md:mr-8 mb-2 md:mb-0 flex flex-row w-1/3 md:w-1/4 justify-center items-center  text-center cursor-pointer bg-gradient-rainblue  text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue  transition duration-500"
             >
               <h1 className="md:text-xl"> See My Works</h1>
               <div className="group-hover:rotate-90 transition duration-200"></div>
@@ -68,7 +68,7 @@ function About({ setActivePage }: AboutProps) {
               offset={50}
               duration={500}
               onClick={() => setActivePage("Contact")}
-              className="group flex flex-row w-2/3 md:w-1/4 justify-center items-center  text-center cursor-pointer bg-gray-300  text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue  transition duration-500"
+              className="group flex flex-row w-1/3 md:w-1/4 justify-center items-center  text-center cursor-pointer bg-gray-300  text-deep-blue rounded-lg py-3 px-7 font-semibold hover:bg-blue  transition duration-500"
             >
               <h1 className="md:text-xl">Download CV</h1>
               <div className="group-hover:rotate-90 transition duration-200">
@@ -89,11 +89,11 @@ function About({ setActivePage }: AboutProps) {
         }}
         className="flex md:hidden"
       >
-        <Socialmedia />
+        {/* <Socialmedia /> */}
       </motion.div>
-      <div className="hidden md:flex">
+      {/* <div className="hidden md:flex">
         <Socialmedia />
-      </div>
+      </div> */}
     </section>
   )
 }

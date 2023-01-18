@@ -25,7 +25,9 @@ module.exports = {
           'filmpire': "url('../public/filmpire.png')",
           'musicplayer': "url('../public/musicplayer.png')",
           'passwordapp': "url('../public/passwordapp.png')",
-          'navbg': "url('../public/contactbg.png')"
+          'navbg': "url('../public/contactbg.png')",
+          'mainbg': "url('../public/bg1.jpg')",
+          'mainbg1': "url('../public/bg3.png')",
 
       }),
       fontFamily:{

@@ -177,7 +177,7 @@ function Aboutme() {
                 <LineGradient width="w-full" />
               </div>
             </div>
-            <div className=" flex flex-col md:flex-row md:flex-wrap ">
+            <div className=" flex flex-col md:flex-row md:items-center md:flex-wrap border-none shadow-inner shadow-slate-700 h-[700px] transit duration-300">
               {testimonialLinks.map((link, i) => (
                 <div
                   className="group flex-1 shadow-lg shadow-slate-700 flex flex-col justify-start items-center px-4 py-4 rounded"
@@ -201,7 +201,7 @@ function Aboutme() {
                     </h1>
                   </Link>
                   <div className=" h-full group-hover:scale-105 transition duration-150">
-                    <p className="font-semibold text-lg italic text-center leading-relaxed tracking-wide ">
+                    <div className="font-semibold text-lg italic text-center leading-relaxed tracking-wide ">
                       {link.smallContent}
 
                       <span>{link.readMore && link.extraContent}</span>
@@ -211,7 +211,7 @@ function Aboutme() {
                       >
                         {link.readMore ? "Read Less" : "Read More"}
                       </div>
-                    </p>
+                    </div>
                   </div>
                 </div>
               ))}

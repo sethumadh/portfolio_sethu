@@ -12,8 +12,9 @@ type NavbarProps = {
   isTopOfPage: boolean
 }
 const links = ["Home", "About", "Works", "Experience", "Contact"]
+
 function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
-  const scrollDirection=useScrollDirection()
+  const scrollDirection = useScrollDirection()
   const [toggleMenu, setToggleMenu] = useState(false)
   const dynamicNavbarBG = !isTopOfPage
     ? "[#FFFAE9] shadow-md shadow-slate-400 "
@@ -30,82 +31,46 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
         hidden: { opacity: 0, x: -50 },
         visible: { opacity: 1, x: 0 },
       }}
-      className={`navbar h-24 w-full mx-auto fixed top-0 right-0 left-0 bg-hero z-20 flex flex-row items-center justify-between px-8  md:px-24 py-4 md:py-4 transition duration-150 bg-${dynamicNavbarBG} ${scrollDirection=="down"?"hidden":"flex"} transition-transform duration-150`}
+      className={`navbar bg-blue flex flex-row justify-center items-center w-full backdrop-blur-lg mx-auto fixed top-0 right-0 left-0 z-20 px-4 md:px-24 py-4 md:py-4 bg-${dynamicNavbarBG} ${
+        scrollDirection == "down" && !toggleMenu
+          ? "-top-28 md:-top-24"
+          : "top-0"
+      } transition-all duration-750`}
     >
-      <div className="md:text-6xl text-2xl font-playfair font-semibold cursor-pointer md:mr-12 ">
-        <Link to="Home" smooth={true} offset={50} duration={500}>
+      <div className="max-w-[90%] w-[1700px] flex flex-row items-center justify-between mx-auto">
+        <Link
+          className="md:hidden md:text-6xl text-4xl font-playfair font-semibold cursor-pointer mr-12 "
+          to="Home"
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
           <h1>SM</h1>
         </Link>
-      </div>
-
-      <ul className="hidden md:flex md:flex-row md:items-center md:justify-center md:gap-16">
-        {links.map((link, i) => (
-          <li
-            key={i}
-            className=" cursor-pointer capitalize font-medium tracking-[5px] hover:scale-105 duration-250 text-2xl  "
-          >
-            <Link
-              to={link}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className={
-                "" + activePage == link
-                  ? "border-b-2 border-gray-400 pb-0 rounded-l-md rounded-r-md transition duration-300"
-                  : ""
-              }
-              onClick={() => setActivePage(link)}
+        <ul className="hidden w-full md:flex md:flex-row md:items-center md:justify-center border-8 border-red">
+          {links.map((link, i) => (
+            <li
+              key={i}
+              className=" cursor-pointer capitalize font-medium tracking-[5px] hover:scale-105 duration-250 text-2xl"
             >
-              {link}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      {!toggleMenu && (
-        <FaBars
-          size={30}
-          className="md:hidden md:mr-4 cursor-pointer  text-slate-700"
-          onClick={() => setToggleMenu(!toggleMenu)}
-        />
-      )}
-      {toggleMenu && (
-        <motion.div
-          whileInView={{ x: [200, 0] }}
-          transition={{ duration: 0.85, ease: "easeOut" }}
-          className="md:hidden flex flex-col fixed right-0 bottom-0 h-full bg-slate-200 w-[200px] p-2 bg-navbg bg-repeat"
-        >
-          <div className="cursor-pointer z-20 text-slate-700 flex justify-end">
-            <FaTimes size={30} onClick={() => setToggleMenu(!toggleMenu)} />
-          </div>
-
-          <ul className="mt-4 flex flex-col space-y-6 cursor-pointer">
-            {links.map((link, i) => (
-              <li
-                key={i}
-                className=" cursor-pointer capitalize font-medium hover:scale-105 duration-250 z-20 "
+              <Link
+                to={link}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                className={
+                  "" + activePage == link
+                    ? "border-b-2 border-gray-400 pb-0 rounded-l-md rounded-r-md transition duration-300"
+                    : ""
+                }
+                onClick={() => setActivePage(link)}
               >
-                <Link
-                  to={link}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  onClick={() => {
-                    setToggleMenu(!toggleMenu)
-                    setActivePage(link)
-                  }}
-                  className={
-                    activePage == link
-                      ? "border-b-4 border-gray-600 pb-0 rounded-l-md rounded-r-md"
-                      : ""
-                  }
-                >
-                  {link}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      )}
+                {link}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </motion.nav>
   )
 }

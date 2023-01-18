@@ -31,12 +31,12 @@ const Home: NextPage = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
   return (
-    <div className="w-full min-h-screen bg-hero bg-repeat   ">
+    <div className="w-full min-h-screen   ">
       <Head>
         <title>Sethu&apos;s Portfolio</title>
       </Head>
 
-      <NavigationDots activePage={activePage} setActivePage={setActivePage} />
+      {/* <NavigationDots activePage={activePage} setActivePage={setActivePage} /> */}
       <div id="Home" className="">
         <Navbar
           activePage={activePage}
@@ -45,20 +45,20 @@ const Home: NextPage = () => {
         />
         <About setActivePage={setActivePage} />
       </div>
-      <div id="About">
+      {/* <div id="About">
         <Aboutme />
       </div>
 
       <div id="Works" className="">
         <Works />
-      </div>
+      </div> */}
       {/* <div id="Works1" className="hidden md:flex">
         <Workscopy/>
       </div> */}
 
-      <div id="Experience" className="">
+      {/* <div id="Experience" className="">
         <Skills />
-      </div>
+      </div> */}
       <div id="Contact" className="">
         <Contactcopy />
         <Footer />

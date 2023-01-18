@@ -5,6 +5,7 @@ export function useScrollDirection() {
 
   useEffect(() => {
     let lastScrollY = window.pageYOffset
+    console.log(lastScrollY)
     // function to run on scroll
     const updateScrollDirection = () => {
       const scrollY = window.pageYOffset

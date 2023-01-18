@@ -75,7 +75,7 @@ const Contactcopy = () => {
           </div>
         </form>
       </motion.nav>
-      <Socialmedia /> 
+      {/* <Socialmedia />  */}
     </section>
   )
 }
