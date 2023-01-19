@@ -43,8 +43,9 @@ const Home: NextPage = () => {
           setActivePage={setActivePage}
           isTopOfPage={isTopOfPage}
         />
-        <About setActivePage={setActivePage} />
+       
       </div>
+      <About setActivePage={setActivePage} />
       {/* <div id="About">
         <Aboutme />
       </div>
@@ -59,10 +60,10 @@ const Home: NextPage = () => {
       {/* <div id="Experience" className="">
         <Skills />
       </div> */}
-      <div id="Contact" className="">
+      {/* <div id="Contact" className="">
         <Contactcopy />
         <Footer />
-      </div>
+      </div> */}
     </div>
   )
 }
