@@ -26,6 +26,16 @@ import sethuNewpic from "../assets/sethuNewpic.png"
 import cyril from "../assets/cyril.jpeg"
 import adrian from "../assets/adrian.jpeg"
 import ahsan from "../assets/ahsan.jpg"
+import athlete from "../assets/athlete.png"
+import travel from "../assets/travel.png"
+import earth from "../assets/earth.png"
+import tech from "../assets/tech.png"
+import rain from "../assets/rain.png"
+import optimist from "../assets/optimist.png"
+import history from "../assets/history.png"
+import learner from "../assets/learner.png"
+import grill from "../assets/grill.png"
+import coffee from "../assets/coffee.png"
 
 import contactProject from "../assets/contactProject.jpg"
 
@@ -58,5 +68,15 @@ export default {
   sethuNewpic,
   cyril,
   ahsan,
-  adrian
+  adrian,
+  history,
+  earth,
+  rain,
+  optimist,
+  athlete,
+  travel,
+  tech,
+  learner,
+  grill,
+  coffee
 }

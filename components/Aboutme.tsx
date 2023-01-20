@@ -1,110 +1,102 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { FcApprove, FcAlarmClock } from "react-icons/fc"
-
-import LineGradient from "./LineGradient"
 import Image from "next/image"
-import { images } from "../constants"
 import Link from "next/link"
 
+import LineGradient from "./LineGradient"
+import { images } from "../constants"
+
 function Aboutme() {
-  const [readMoreT1, setreadMoreT1] = useState(false)
-  const [readMoreT2, setreadMoreT2] = useState(false)
-  const [readMoreT3, setreadMoreT3] = useState(false)
-
-  const testimonialLinks = [
+  const items = [
     {
-      src: images.cyril,
-      readMore: readMoreT1,
-      setReadmore: setreadMoreT1,
-      href: "https://www.linkedin.com/in/emmacyril/",
-      name: "Emmanuel Cyril",
-      title: " Lead Software Engineer",
-      title1: " Lead Software Engineer",
-      smallContent:
-        "'During my time at The JSM Masterclass Experience, I had the great fortune to work alongside Sethumadhavan. He's ability to think creatively and devise novel approaches to fixing bugs in code is awe-inspiring. Sethumadhavan",
-      extraContent:
-        " is dogged and thorough when it comes to fixing bugs. Sethumadhavan will be a great addition to any group he joins. In addition to giving Sethumadhavan my highest recommendation, I am also pleased to call him a friend.",
+      id: 6,
+      src: images.next,
+      title: "Next JS",
+      style: "shadow-white",
     },
     {
-      src: images.adrian,
-      readMore: readMoreT2,
-      setReadmore: setreadMoreT2,
-      href: "https://www.linkedin.com/in/adrianhajdin/",
-      name: "Adrian Hadjin",
-      title: " Founder & CEO - JavaScript Mastery",
-      title1: " Founder & CEO",
-      sub: "JavaScript Mastery",
-      smallContent:
-        "I am happy to recommend Sethumadhavan Kochukrishnan for his exceptional skills as a Full-Stack software engineer. Throughout my time with him on open-source projects, I was consistently impressed by Sethu's",
-      extraContent:
-        " passion for code and ability to write clean, stable code. Seth is not only an active learner who is always eager to learn new knowledge but also someone who can find solutions when facing new difficulties. He is an excellent collaborator and communicator and played a vital role in our team. I highly recommend Seth for software engineering opportunities, and I am confident he will be a valuable asset to any team",
+      id: 4,
+      src: images.react,
+      title: "React",
+      style: "shadow-blue-600",
     },
     {
-      src: images.ahsan,
-      readMore: readMoreT3,
-      setReadmore: setreadMoreT3,
-      href: "https://www.linkedin.com/in/ahsan-syed-7b26b41a4/",
-      name: "Ahsan Syed",
-      title: " Full Stack Software Developer",
-      title1: " Full Stack Software Developer",
-      smallContent:
-        "During my time working on CarRental, I had the pleasure of working alongside Sethu. I was impressed by his ability to communicate his problems and in the same breath find the solution to it. Sethu",
-      extraContent:
-        " is more than capable of writing clean and effective code. Sethu has great understanding of Javascript and React hooks and has the trait of a developer who goes beyond. I highly recommend Sethu because I believe he would make a fine addition to anyone's team",
-    },
-  ]
-  const serviceLinks = [
-    {
-      title: "UI/UX Design",
-      h1: "Web Design",
-      h2: "App Design",
-      h3: "Dashboard Design",
-      id: 1,
-      style: "md:col-start-1 md:col-span-3",
+      id: 10,
+      src: images.typescript,
+      title: "TypeScript",
+      style: "shadow-gray-400",
     },
     {
-      title: "App Development",
-      h1: "Web Development",
-      h2: "Product Development",
-      h3: "Testing",
-      id: 2,
-      style: "md:col-start-4 md:col-span-3",
+      id: 5,
+      src: images.tailwind,
+      title: "Tailwind",
+      style: "shadow-sky-400",
     },
     {
-      title: "Branding",
-      h1: "Brand Design",
-      h2: "App Design",
-      h3: "Brand Promotion",
+      id: 9,
+      src: images.redux,
+      title: "Redux",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 14,
+      src: images.node,
+      title: "Node js",
+      style: "shadow-gray-400",
+    },
+    {
       id: 3,
-      style: "md:col-start-2 md:col-span-4",
+      src: images.js,
+      title: "JavaScript",
+      style: "shadow-yellow-500",
+    },
+    {
+      id: 7,
+      src: images.graphql,
+      title: "GraphQL",
+      style: "shadow-pink-400",
+    },
+    {
+      id: 8,
+      src: images.github,
+      title: "GitHub",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 1,
+      src: images.html,
+      title: "HTML",
+      style: "shadow-orange-500",
+    },
+    {
+      id: 2,
+      src: images.css,
+      title: "CSS",
+      style: "shadow-blue-500",
+    },
+    {
+      id: 11,
+      src: images.framer,
+      title: "Framer Motion",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 12,
+      src: images.mongodb,
+      title: "Mongo DB",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 13,
+      src: images.sanity,
+      title: "Sanity",
+      style: "shadow-gray-400",
     },
   ]
 
-  const strengthLinks = [
-    {
-      title: "Collaborative",
-      body: "Always keen to share my knowledge, help, discuss, teach and learn from others. Able to collaborate with cross functional teams to create a highquality end product.",
-      id: 1,
-      style: "md:col-start-1 md:col-span-3",
-    },
-    {
-      title: "Result-oriented",
-      body: "Focus on the progress with moving in the right direction. I always make sure on improving my work and my team's work",
-      id: 2,
-      style: "md:col-start-4 md:col-span-3",
-    },
-    {
-      title: "Project Management",
-      body: "Before staring a new proect, I always set time aside to have the entire team go through the tasks, prioritize them and assign a due date to make sure deadlines are promptly met.",
-      id: 3,
-      style: "md:col-start-2 md:col-span-4",
-    },
-  ]
   return (
-    <section
-      className={`works md:min-h-screen max-w-[90%] w-[1800px] mx-auto mt-28`}
-    >
+    <section className={`Aboutme w-screen border-8 border-red  bg-slate-100`}>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -114,107 +106,48 @@ function Aboutme() {
           hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
         }}
+        className="w-[85%] mx-auto border-8 border-red min-h-screen mt-12"
       >
-        <div className="flex flex-col">
-          <div className="flex items-center justify-center">
-            <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-12 md:mb-24 flex">
-              <div>
+        <h1 className="text-center text-3xl font-semibold text-deep-blue sm:text-5xl leading-loose tracking-wide pt-2 underline">
+          About me
+        </h1>
+        <div className=" flex flex-col md:flex-row border-8 border-red mt-2 py-4">
+          <div className="w-full max-w-lg  mx-auto md:w-1/3">
+            <Image
+              src={images.sethuNewpic}
+              alt="sethu"
+              className=" object-cover"
+            />
+          </div>
+          <div className="flex flex-col grow border-8 border-blue">
+            <div className="flex flex-col">
+              <h1 className="text-center text-2xl underline font-semibold">
                 {" "}
-                <span className="text-gray-500 tracking-wider">WHY</span>{" "}
-                <span className="italic tracking-wider">HIRE ME</span>
-                <LineGradient width="w-full" />
-              </div>
-
-              <div className="flex items-center">
-                <FcApprove />
-              </div>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-8 w-full md:w-full  ">
-            {serviceLinks.map((link) => (
-              <div
-                className={`border-8 border-none grid-flow-row shadow-lg shadow-slate-700 rounded-lg h-56 px-4 mx-4 py-4 ${link.style} hover:scale-105 transition duration-150`}
-                key={link.id}
-              >
-                <div className=" mx-auto max-w-max  font-bold text-lg  md:text-3xl  mb-8 text-slate-600 border-b-4  border-b-slate-300 ">
-                  <h1>{link.title}</h1>
-                </div>
-                <div className=" flex flex-col md:flex-row gap-2 justify-evenly font-bold text-center md:text-start text-md  md:text-2xl italic text-slate-700 ">
-                  <div className="">{link.h1}</div>
-                  <div className="">{link.h2}</div>
-                  <div className="">{link.h3}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center justify-center mt-32">
-            <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-12 md:mb-24">
-              <span className="text-gray-500 tracking-wider">MY</span>{" "}
-              <span className="italic tracking-wider">STRENGTHS</span>
-              <LineGradient width="w-full" />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-6 grid-flow-row auto-rows-max gap-4 md:gap-8 w-full md:w-full ">
-            {strengthLinks.map((link) => (
-              <div
-                className={`border-8 border-none grid-flow-row shadow-lg shadow-slate-700 rounded-lg h-56 px-4 py-4 ${link.style} hover:scale-105 transition duration-150`}
-                key={link.id}
-              >
-                <div className="mx-auto max-w-max  font-bold text-lg  md:text-3xl  mb-8 text-slate-600 border-b-4  border-b-slate-300 ">
-                  {link.title}
-                </div>
-                <div className=" flex justify-evenly font-semibold text-md  md:text-xl italic text-slate-700  ">
-                  {link.body}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className=" flex flex-col justify-center items-center mt-8 md:mt-16 py-4 ">
-            <div className="flex items-center justify-center  ">
-              <div className="font-playfair font-semibold text-xl md:text-4xl md:text-start mb-12 md:mb-24">
-                <span className="text-gray-500 tracking-wider">MY</span>{" "}
-                <span className="italic tracking-wider">TESTIMONIALS</span>
-                <LineGradient width="w-full" />
-              </div>
-            </div>
-            <div className=" flex flex-col md:flex-row md:items-center md:flex-wrap border-none shadow-inner shadow-slate-700 h-[700px] transit duration-300">
-              {testimonialLinks.map((link, i) => (
-                <div
-                  className="group flex-1 shadow-lg shadow-slate-700 flex flex-col justify-start items-center px-4 py-4 rounded"
-                  key={i}
-                >
-                  <Link href={link.href} target="_blank" className="cursor-pointer h-1/3 flex flex-col justify-center items-center mb-6 md:mb-12 group-hover:scale-105 transition duration-150">
-                    <Image
-                      src={link.src}
-                      alt="profilpictureoftest"
-                      className="rounded-full w-36 h-[144px] flex justify-center items-center mb-2"
-                    />
-                    <h1 className="font-semibold text-xl mt-1">{link.name}</h1>
-                    <h1 className="font-semibold text-xl mt-1 hidden md:block">
-                      {link.title}
-                    </h1>
-                    <h1 className="font-semibold text-xl mt-1 md:hidden">
-                      {link.title1}
-                    </h1>
-                    <h1 className="font-semibold text-xl mt-1 md:hidden">
-                      {link.sub}
-                    </h1>
-                  </Link>
-                  <div className=" h-full group-hover:scale-105 transition duration-150">
-                    <div className="font-semibold text-lg italic text-center leading-relaxed tracking-wide ">
-                      {link.smallContent}
-
-                      <span>{link.readMore && link.extraContent}</span>
-                      <div
-                        className="cursor-pointer underline text-blue"
-                        onClick={() => link.setReadmore(!link.readMore)}
-                      >
-                        {link.readMore ? "Read Less" : "Read More"}
-                      </div>
+                My Skills and Toolbox
+              </h1>
+              <div className="w-full grid grid-cols-4 sm:grid-cols-7 text-center py-4">
+                {items.map(({ id, src, title }) => {
+                  return (
+                    <div
+                      className="shadow-md shadow-[#040c16] hover:scale-110 duration-500 rounded-lg flex flex-col justify-between items-center"
+                      key={id}
+                    >
+                      <Image
+                        src={src}
+                        alt={"tech"}
+                        className="w-6 sm:w-8 md:w-12  mx-auto pt-4"
+                      />
+                      <p className="mt-2 mb-0 text-sm font-semibold flex items-end justify-ccenter">
+                        {title}
+                      </p>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  )
+                })}
+              </div>
+            </div>
+
+            <div>
+
             </div>
           </div>
         </div>

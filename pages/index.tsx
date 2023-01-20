@@ -46,11 +46,11 @@ const Home: NextPage = () => {
        
       </div>
       <About setActivePage={setActivePage} />
-      {/* <div id="About">
+      <div id="About">
         <Aboutme />
       </div>
 
-      <div id="Works" className="">
+      {/* <div id="Works" className="">
         <Works />
       </div> */}
       {/* <div id="Works1" className="hidden md:flex">
