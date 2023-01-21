@@ -78,5 +78,6 @@ export default {
   tech,
   learner,
   grill,
-  coffee
+  coffee,
+  
 }

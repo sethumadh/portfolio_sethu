@@ -85,7 +85,7 @@ function Aboutme() {
   ]
 
   return (
-    <section className={`Aboutme w-screen  bg-white`}>
+    <section className={`Aboutme w-screen bg-white `}>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -95,14 +95,14 @@ function Aboutme() {
           hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="w-[85%] mx-auto  min-h-screen mt-12"
+        className="w-[85%] mx-auto mt-12"
       >
         {" "}
-        <div className="flex justify-center md:justify-start text-2xl sm:text-3xl font-semibold tracking-wide mb-4 ">
+        <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 py-8">
           <div className="mr-3">Who is </div>
           <div className="relative">
             Sethu?
-            <div className="h-[13.5px] w-[98%] bg-orange-600 absolute bottom-0 -z-30"></div>
+            <div className="h-[13.5px] w-[100%] bg-orange-600 absolute right-0 bottom-0 -z-30"></div>
           </div>
         </div>
         <div className=" flex flex-col items-center md:flex-row  mt-2 py-4 ">
@@ -133,11 +133,11 @@ function Aboutme() {
           </div>
         </div>
         <div className=" mt-8">
-          <div className="flex justify-center md:justify-start text-2xl sm:text-3xl font-semibold tracking-wide mb-4 md:mb-8 ">
+          <div className="flex justify-center md:justify-start text-2xl sm:text-3xl font-semibold tracking-wide py-4">
             <div className="mr-3">My </div>
             <div className="relative">
               Toolbox
-              <div className="h-[13.5px] w-[98%] bg-orange-600 absolute bottom-0 -z-30"></div>
+              <div className="h-[13.5px] w-[100%] bg-orange-600 absolute right-0 bottom-0 -z-30"></div>
             </div>
           </div>
           <div className="flex flex-wrap justify-center w-full text-center py-4">

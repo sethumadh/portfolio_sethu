@@ -50,9 +50,9 @@ const Home: NextPage = () => {
         <Aboutme />
       </div>
 
-      {/* <div id="Works" className="">
+      <div id="Works" className="">
         <Works />
-      </div> */}
+      </div>
       {/* <div id="Works1" className="hidden md:flex">
         <Workscopy/>
       </div> */}

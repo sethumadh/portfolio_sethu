@@ -30,6 +30,7 @@ module.exports = {
         navbg: "url('../public/contactbg.png')",
         mainbg: "url('../public/bg1.jpg')",
         mainbg1: "url('../public/bg3.png')",
+        bgWhite: "url('../public/bgWhite.png')",
       }),
       fontFamily: {
         opensans: ["Open Sans", "sans-serif"],
