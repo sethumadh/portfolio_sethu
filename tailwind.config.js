@@ -34,7 +34,7 @@ module.exports = {
       fontFamily: {
         opensans: ["Open Sans", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
-        raleway: ["Raleway", "sans-serif"],
+        mulish: ["Mulish", "sans-serif"],
       },
       screens: {
         xs: "480px",

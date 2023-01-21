@@ -133,7 +133,7 @@ function About({ setActivePage }: AboutProps) {
               </Link>
             ))}
           </div>
-          <div className="max-w-md text-base font-light md:text-lg lg:text-xl xl:text-xl leading-loose tracking-wide">
+          <div className="max-w-3xl text-base font-light md:text-lg lg:text-xl xl:text-2xl leading-loose tracking-wide">
             <span>I love exploring and creating </span>
             <span className="text-center inline-block px-2">
               <Image src={images.tech} alt="tech" width={16} />{" "}
