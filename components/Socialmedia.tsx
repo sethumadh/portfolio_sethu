@@ -56,7 +56,7 @@ export default function Socialmedia() {
 
   return (
     <>
-      <div className="flex flex-row justify-center items-center w-2/3 mx-auto md:hidden mt-12">
+      {/* <div className="flex flex-row justify-center items-center w-2/3 mx-auto md:hidden mt-12">
         {links.map(({ id, url}) => {
           return (
             <div key={id} className="px-2">
@@ -69,9 +69,9 @@ export default function Socialmedia() {
             </div>
           )
         })}
-      </div>
+      </div> */}
 
-      <div className="hidden md:flex flex-col top-[35%] left-0 fixed">
+      <div className="hidden md:flex flex-col top-[65%] left-0 fixed">
         <ul>
           {links.map(({ id, child, href, style, download }) => (
             <li

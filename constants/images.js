@@ -36,6 +36,8 @@ import history from "../assets/history.png"
 import learner from "../assets/learner.png"
 import grill from "../assets/grill.png"
 import coffee from "../assets/coffee.png"
+import fp from "../assets/fp.png"
+import lk from "../assets/lk.png"
 
 import contactProject from "../assets/contactProject.jpg"
 
@@ -79,5 +81,7 @@ export default {
   learner,
   grill,
   coffee,
+  fp,
+  lk
   
 }

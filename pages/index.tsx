@@ -2,18 +2,17 @@ import React, { useState, useEffect } from "react"
 import Head from "next/head"
 import type { NextPage } from "next"
 
-import { Navbar } from "../components"
+import { Navbar, Socialmedia } from "../components"
 import {
   NavigationDots,
   About,
-  Contactcopy,
+  Contact,
   Skills,
   Footer,
 } from "../components"
 import { images } from "../constants"
 import Works from "../components/Works"
 import Aboutme from "../components/Aboutme"
-// import Workscopy from "../components/Workscopy"
 
 const Home: NextPage = () => {
   const [activePage, setActivePage] = useState("Home")
@@ -43,27 +42,20 @@ const Home: NextPage = () => {
           setActivePage={setActivePage}
           isTopOfPage={isTopOfPage}
         />
-       
       </div>
       <About setActivePage={setActivePage} />
       <div id="About">
         <Aboutme />
       </div>
 
-      <div id="Works" className="">
+      <div id="Works">
         <Works />
       </div>
-      {/* <div id="Works1" className="hidden md:flex">
-        <Workscopy/>
-      </div> */}
-
-      {/* <div id="Experience" className="">
-        <Skills />
-      </div> */}
-      {/* <div id="Contact" className="">
-        <Contactcopy />
-        <Footer />
-      </div> */}
+<Socialmedia/>
+      <div id="Contact" className="">
+        {/* <Contact /> */}
+        {/* <Footer /> */}
+      </div>
     </div>
   )
 }

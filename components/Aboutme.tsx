@@ -85,17 +85,17 @@ function Aboutme() {
   ]
 
   return (
-    <section className={`Aboutme w-screen bg-white `}>
+    <section className={`Aboutme w-screen bg-bgWhite `}>
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
         variants={{
-          hidden: { opacity: 0, x: -50 },
+          hidden: { opacity: 0, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="w-[85%] mx-auto mt-12"
+        className="w-[85%] mx-auto mt-8 md:mt-12"
       >
         {" "}
         <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 py-8">
@@ -105,8 +105,8 @@ function Aboutme() {
             <div className="h-[13.5px] w-[100%] bg-orange-600 absolute right-0 bottom-0 -z-30"></div>
           </div>
         </div>
-        <div className=" flex flex-col items-center md:flex-row  mt-2 py-4 ">
-          <div className="w-full max-w-lg min-w-[200px] mx-auto md:w-1/3">
+        <div className=" flex flex-col items-center md:flex-row  mt-2 py-4 border border-red ">
+          <div className="w-full max-w-md min-w-[200px] mx-auto md:w-1/3  border border-blue">
             <Image
               src={images.sethuNewpic}
               alt="sethu"
@@ -114,19 +114,32 @@ function Aboutme() {
             />
           </div>
           <div className="flex flex-col justify-center mt-3 md:ml-3 md:w-2/3 grow ">
-            <div className=" w-full mx-auto flex flex-col">
-              <p className="leading-relaxed tracking-wide text-lg md:text-xl font-light">
-                I am an Engineer Graduate specialized in Electronics and
-                communication and my passion for coding started since I was in
-                school with JavaScript and C++. I sweat the details. I&apos;m
-                happiest when I&apos;m creating, learning, exploring and
-                thinking about how to make things better. I&apos;m passionate
-                about bringing both the technical and visual aspects of digital
-                products to life. User experience, writing clean accessible,
-                human code matter to me. And as someone who follows of John
-                Maeda&apos;s Laws Of Simplicity, I agree that less is more.
+            <div className="w-full md:w-[90%] mx-auto flex flex-col">
+              <p className="leading-loose tracking-wide text-lg md:text-xl font-light">
+                I am an{" "}
+                <span className="text-blue font-medium leading-loose tracking-wide ">Engineer Graduate</span>{" "}
+                and my passion for coding started since I was in school with
+                JavaScript and C++.{" "}
+                <span className="text-blue font-medium leading-loose tracking-wide ">
+                  I sweat the details.
+                </span>{" "}
+                I&apos;m happiest when I&apos;m creating, learning, exploring
+                and thinking about how to make things better.{" "}
+                 User experience, writing clean accessible,
+                human code{" "}
+                <span className="text-blue font-medium leading-loose tracking-wide "> matter to me. </span>
+                And as someone who follows of{" "}
+                <span className="text-blue font-medium leading-loose tracking-wide ">
+                  {" "}
+                  John Maeda&apos;s Laws Of Simplicity,{" "}
+                </span>{" "}
+                I agree that{" "}
+                <span className="text-blue font-medium leading-loose tracking-wide ">less is more.</span>
               </p>
-              <Link href={`#`} className="text-orange-500 font-bold text-lg pt-4">
+              <Link
+                href={`#`}
+                className="text-orange-500 font-bold text-lg pt-4"
+              >
                 Keep reading my bio
               </Link>
             </div>

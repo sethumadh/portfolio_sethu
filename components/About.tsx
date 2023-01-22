@@ -89,20 +89,20 @@ function About({ setActivePage }: AboutProps) {
   )
 
   return (
-    <section className="border-8 w-full min-h-screen flex flex-col justify-center items-center border-orange-800 bg-orange-700 bg-no-repeat pt-24">
+    <section className=" w-full min-h-screen flex flex-col justify-center items-center bg-orange-700 bg-no-repeat pt-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.5 }}
         variants={{
-          hidden: { opacity: 0, x: -50 },
+          hidden: { opacity: 0, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
-        className=" w-[90%] mx-auto  border-8 border-blue flex items-center "
+        className=" w-[90%] mx-auto flex items-center "
       >
         {" "}
-        <div className="w-full mx-auto pt-8 border-8 border-red text-white font-semibold text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
+        <div className="w-full mx-auto pt-8 text-white font-semibold text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
           <h1 className="">Hi, I&apos;m Sethumadhavan | </h1>
           <div>
             {" "}
@@ -121,7 +121,7 @@ function About({ setActivePage }: AboutProps) {
               </div>
             </div>
           </div>
-          <div className="border-8 border-red flex flex-row justify-start items-center ">
+          <div className="flex flex-row justify-start items-center ">
             {links.map((link, i) => (
               <Link
                 href={link.href}
@@ -133,19 +133,19 @@ function About({ setActivePage }: AboutProps) {
               </Link>
             ))}
           </div>
-          <div className="max-w-3xl text-base font-light md:text-lg lg:text-xl xl:text-2xl leading-loose tracking-wide">
+          <div className="max-w-3xl text-base font-light md:text-2xl lg:text-3l xl:text-4xl leading-loose tracking-wide ">
             <span>I love exploring and creating </span>
             <span className="text-center inline-block px-2">
-              <Image src={images.tech} alt="tech" width={16} />{" "}
+              <Image src={images.tech} alt="tech" width={40} />{" "}
             </span>{" "}
             <div className="inline">
               I am a life long learner and I might have a thing for grill{" "}
               <span className="inline-block text-center px-2">
-                <Image src={images.grill} alt="grill" width={16} />{" "}
+                <Image src={images.grill} alt="grill" width={30} />{" "}
               </span>{" "}
               & coffee{"   "}
               <span className="inline-block text-center px-1">
-                <Image src={images.coffee} alt="coffee" width={16} />{" "}
+                <Image src={images.coffee} alt="coffee" width={40} />{" "}
               </span>
             </div>
           </div>{" "}

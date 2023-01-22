@@ -28,7 +28,7 @@ module.exports = {
         musicplayer: "url('../public/musicplayer.png')",
         passwordapp: "url('../public/passwordapp.png')",
         navbg: "url('../public/contactbg.png')",
-        mainbg: "url('../public/bg1.jpg')",
+        contactbg1: "url('../public/contactbg1.png')",
         mainbg1: "url('../public/bg3.png')",
         bgWhite: "url('../public/bgWhite.png')",
       }),
