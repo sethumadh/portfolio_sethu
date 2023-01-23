@@ -32,7 +32,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
         hidden: { opacity: 0, x: 0 },
         visible: { opacity: 1, x: 0 },
       }}
-      className={`navbar bg-blue h-[70px] md:h-20 flex flex-row justify-end items-center backdrop-blur-lg fixed top-0 right-0 left-0 z-20 md:py-4 bg-${dynamicNavbarBG} ${
+      className={`navbar bg-blue h-[70px] md:h-[70px] flex flex-row justify-end items-center backdrop-blur-lg fixed top-0 right-0 left-0 z-20 md:py-4 bg-${dynamicNavbarBG} ${
         scrollDirection == "down" && !toggleMenu
           ? "-top-28 md:-top-28"
           : "top-0"
@@ -80,8 +80,8 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
         )}
         {toggleMenu && (
           <motion.nav
-            whileInView={{ x: [200, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }}
+            // whileInView={{ x: [200, 0] }}
+            // transition={{ duration: 0.85, ease: "easeOut" }}
             className={`md:hidden flex flex-col fixed top-0 right-0 bottom-0 min-h-screen w-[200px] p-2 bg-mainbg1 bg-repeat `}
           >
             <div className="cursor-pointer z-20 text-slate-700 flex justify-end">
@@ -101,7 +101,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
                     // duration={500}
                     onClick={() => {
                       setToggleMenu(!toggleMenu)
-                      setActivePage(link)
+                      // setActivePage(link)
                     }}
                     className={
                       activePage == link

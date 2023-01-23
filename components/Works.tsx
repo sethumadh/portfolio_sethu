@@ -30,7 +30,7 @@ function Works() {
     },
     {
       src: images.carrental,
-      title: "MORENT",
+      title: "Morent",
       subtitle: "- Modern Car Rental Application",
       role: "Full Stack Developer",
       tech: [
@@ -56,20 +56,20 @@ function Works() {
     // },
   ]
   return (
-    <section className={`works w-screen bg-white h-screen`}>
-      <motion.nav
+    <section className={`works w-screen bg-white `}>
+      <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.0 }}
+        transition={{ duration: 0.6 }}
         variants={{
-          hidden: { opacity: 0, x: 0 },
+          hidden: { opacity: 0.2, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
         className="w-[85%] mx-auto mt-8 md:mt-12"
       >
-        <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 py-8">
-          <div className="mr-3"></div>
+        <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 pt-8 pb-4">
+          <div className="mr-3">Featured</div>
           <div className="relative">
             Projects
             <div className="h-[13.5px] w-[100%] bg-orange-600 absolute right-0 bottom-0 -z-30"></div>
@@ -102,18 +102,18 @@ function Works() {
                 <div className="mb-2 md:mb-4 px-4 py-2">
                   <p className="leading-loose tracking-wide">{link.body}</p>
                 </div>
-                <div className="flex mx-auto items-center justify-between mb-3 md:mb-0">
+                <div className="flex mx-auto items-center justify-between mb-3 md:mb-0 ">
                   <Link
                     href={`/project/${link.title}`}
-                    className="mr-8 text-sm md:text-base relative -top-1 -left-1 bg-orange-700 py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-2 before:left-2 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0 duration-300"
+                    className="mr-8 text-sm md:text-base relative -top-1 -left-1 bg-orange-700  py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-2 before:left-2 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0 duration-300"
                   >
-                    Project Details
+                    Details
                   </Link>
                   <Link
                     href={`/project/${link.title}`}
                     className="mr-8 text-sm md:text-base relative -top-1 -left-1 bg-orange-700 py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-2 before:left-2 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0 duration-300"
                   >
-                    Github Code
+                    Github
                   </Link>
                   <Link
                     target={`_blank`}
@@ -131,7 +131,7 @@ function Works() {
             </div>
           ))}
         </div>
-      </motion.nav>
+      </motion.div>
     </section>
   )
 }

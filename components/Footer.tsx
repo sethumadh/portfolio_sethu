@@ -5,26 +5,28 @@ import { Socialmedia } from "./index"
 
 const Footer = () => {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5 }}
-      variants={{
-        hidden: { opacity: 0, x: -50 },
-        visible: { opacity: 1, x: 0 },
-      }}
-      id="Experience"
-    >
-      <footer className=" w-[90%] max-w-[1800px] mx-auto flex flex-col md:flex-row justify-around items-end py-4">
-            <p className="font-playfair font-semibold text-2xl w-full flex justify-center">
-              Sethu Madhavan
+    <section className={`works w-screen bg-blue `}>
+      <motion.footer
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.0 }}
+        transition={{ duration: 0.6 }}
+        variants={{
+          hidden: { opacity: 0.2, x: 0 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="w-[85%] mx-auto   mt-8 md:mt-12"
+      >
+        <div className="flex flex-col md:flex-row justify-around items-end py-4">
+            <p className="font-mulish font-semibold text-xl w-full flex justify-center">
+              SethuMadhavan (aka Sethu)
             </p>
             <p className="font-playfair text-xs md:text-lg font-semibold w-full flex justify-center ">
-              ©2022 Powered by Next JS, TypeScript & Tailwind.
+              ©2023 Powered by Next JS, TypeScript & Tailwind.
             </p>
-      </footer>
-    </motion.div>
+      </div>
+    </motion.footer>
+    </section>
   )
 }
 

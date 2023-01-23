@@ -2,17 +2,16 @@ import React, { useState, useEffect } from "react"
 import Head from "next/head"
 import type { NextPage } from "next"
 
-import { Navbar, Socialmedia } from "../components"
 import {
-  NavigationDots,
+  Navbar,
+  Socialmedia,
   About,
+  Aboutme,
+  Works,
   Contact,
-  Skills,
   Footer,
 } from "../components"
 import { images } from "../constants"
-import Works from "../components/Works"
-import Aboutme from "../components/Aboutme"
 
 const Home: NextPage = () => {
   const [activePage, setActivePage] = useState("Home")
@@ -30,19 +29,13 @@ const Home: NextPage = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
   return (
-    <div className="w-full min-h-screen   ">
+    <div className="w-full min-h-screen " id="Home">
       <Head>
         <title>Sethu&apos;s Portfolio</title>
       </Head>
 
       {/* <NavigationDots activePage={activePage} setActivePage={setActivePage} /> */}
-      <div id="Home" className="">
-        <Navbar
-          activePage={activePage}
-          setActivePage={setActivePage}
-          isTopOfPage={isTopOfPage}
-        />
-      </div>
+
       <About setActivePage={setActivePage} />
       <div id="About">
         <Aboutme />
@@ -51,10 +44,9 @@ const Home: NextPage = () => {
       <div id="Works">
         <Works />
       </div>
-<Socialmedia/>
+      {/* <Socialmedia /> */}
       <div id="Contact" className="">
-        {/* <Contact /> */}
-        {/* <Footer /> */}
+        <Contact />
       </div>
     </div>
   )

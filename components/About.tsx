@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { Dispatch, SetStateAction } from "react"
-import { MdOutlineKeyboardArrowRight } from "react-icons/md"
 import { Icon } from "react-icons-kit"
 import { envelop } from "react-icons-kit/icomoon/envelop"
 import { linkedin } from "react-icons-kit/icomoon/linkedin"
@@ -89,7 +88,7 @@ function About({ setActivePage }: AboutProps) {
   )
 
   return (
-    <section className=" w-full min-h-screen flex flex-col justify-center items-center bg-orange-700 bg-no-repeat pt-24">
+    <section className=" w-full min-h-screen flex flex-col justify-center items-center bg-gray-900 bg-no-repeat pt-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -102,21 +101,38 @@ function About({ setActivePage }: AboutProps) {
         className=" w-[90%] mx-auto flex items-center "
       >
         {" "}
-        <div className="w-full mx-auto pt-8 text-white font-semibold text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
-          <h1 className="">Hi, I&apos;m Sethumadhavan | </h1>
+        <div className="w-full mx-auto pt-8 text-white font-semibold text-[42px]  sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
+          <h1 className="text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
+            Hi, I&apos;m <br/> Sethumadhavan {" "}
+          </h1>
           <div>
             {" "}
-            <span className="font-black">
-              Engineer turned Developer{" "}
+            <span className="font-semibold flex flex-wrap items-center">
+              <div className="pr-4 flex justify-center md:justify-start font-semibold text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
+                <div className="relative">
+                  Engineer
+                  <div className="h-[20.5px] w-[100%] bg-orange-500 absolute right-0 bottom-2 -z-30"></div>
+                </div>
+              </div>
+              <span className="pr-4 font-semibold text-[42px]  sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide">
+                turned
+              </span>
+              <br/>
+              <div className="pr-4 flex justify-center md:justify-start font-semibold text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
+                <div className="relative">
+                  Developer
+                  <div className="h-[20.5px] w-[100%] bg-orange-500 absolute right-0 bottom-2 -z-30"></div>
+                </div>
+              </div>
               <span className=" font-medium">and</span>
             </span>{" "}
-            <div className="flex items-center lg:mt-4 md:pt-2">
+            <div className="flex items-center mt-4 pt-2">
               <span
                 className={`animate-words-anim inline-block mr-4 text-2xl md:text-3xl lg:text-4xl xl:text-5xl`}
               >
                 {item}{" "}
               </span>
-              <div className={`animate-words-anim inline-block`}>
+              <div className={`animate-words-anim `}>
                 <Image src={icon} width={30} alt="icon" />
               </div>
             </div>
@@ -127,7 +143,7 @@ function About({ setActivePage }: AboutProps) {
                 href={link.href}
                 target="_blank"
                 key={i}
-                className="w-8 md:w-12 mr-8 cursor-pointer hover:text-red transition-all delay-200"
+                className="w-8 md:w-12 mr-8 cursor-pointer hover:text-orange-600 transition-all delay-200"
               >
                 {link.child}
               </Link>
@@ -139,10 +155,10 @@ function About({ setActivePage }: AboutProps) {
               <Image src={images.tech} alt="tech" width={40} />{" "}
             </span>{" "}
             <div className="inline">
-              I am a life long learner and I might have a thing for grill{" "}
+              I am a life long learner and I might have a thing for <Link className="text-orange-600 font-semibold italic" href={`https://www.google.com/search?q=sadhya&sxsrf=AJOqlzVGp2OxyFqjYfjOZ9kkeBCJZ7fU8A%3A1674473060607&ei=ZG7OY5XcJLaRjuMP9PWxkAs&ved=0ahUKEwiVntqfyt38AhW2iGMGHfR6DLIQ4dUDCA8&oq=sadhya&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQDEoECEEYAEoECEYYAFAAWABgAGgAcAF4AIABAIgBAJIBAJgBAA&sclient=gws-wiz-serp`}> Sadya{" "}
               <span className="inline-block text-center px-2">
-                <Image src={images.grill} alt="grill" width={30} />{" "}
-              </span>{" "}
+                <Image src={images.sadya} alt="grill" width={40} />{" "}
+              </span>{" "}</Link>
               & coffee{"   "}
               <span className="inline-block text-center px-1">
                 <Image src={images.coffee} alt="coffee" width={40} />{" "}

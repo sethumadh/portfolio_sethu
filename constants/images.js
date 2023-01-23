@@ -38,6 +38,9 @@ import grill from "../assets/grill.png"
 import coffee from "../assets/coffee.png"
 import fp from "../assets/fp.png"
 import lk from "../assets/lk.png"
+import mr from "../assets/mr.png"
+import coffeemug from "../assets/coffeemug.svg"
+import sadya from "../assets/sadya.png"
 
 import contactProject from "../assets/contactProject.jpg"
 
@@ -82,6 +85,9 @@ export default {
   grill,
   coffee,
   fp,
-  lk
+  lk,
+  mr,
+  coffeemug,
+  sadya
   
 }

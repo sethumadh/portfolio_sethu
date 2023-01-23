@@ -89,24 +89,24 @@ function Aboutme() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.0 }}
+        transition={{ duration: 0.6 }}
         variants={{
-          hidden: { opacity: 0, x: 0 },
+          hidden: { opacity: 0.2, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
         className="w-[85%] mx-auto mt-8 md:mt-12"
       >
         {" "}
-        <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 py-8">
+        <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 pt-8 pb-4">
           <div className="mr-3">Who is </div>
           <div className="relative">
             Sethu?
             <div className="h-[13.5px] w-[100%] bg-orange-600 absolute right-0 bottom-0 -z-30"></div>
           </div>
         </div>
-        <div className=" flex flex-col items-center md:flex-row  mt-2 py-4 border border-red ">
-          <div className="w-full max-w-md min-w-[200px] mx-auto md:w-1/3  border border-blue">
+        <div className=" flex flex-col items-center md:flex-row  mt-2 py-4">
+          <div className="w-full max-w-md min-w-[200px] mx-auto md:w-1/3 ">
             <Image
               src={images.sethuNewpic}
               alt="sethu"
@@ -137,7 +137,7 @@ function Aboutme() {
                 <span className="text-blue font-medium leading-loose tracking-wide ">less is more.</span>
               </p>
               <Link
-                href={`#`}
+                href={`/bio`}
                 className="text-orange-500 font-bold text-lg pt-4"
               >
                 Keep reading my bio

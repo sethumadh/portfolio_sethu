@@ -36,6 +36,7 @@ module.exports = {
         opensans: ["Open Sans", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
         mulish: ["Mulish", "sans-serif"],
+        mada: ["Mada", "sans-serif"],
       },
       screens: {
         xs: "480px",
