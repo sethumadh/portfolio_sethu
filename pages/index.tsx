@@ -10,6 +10,7 @@ import {
   Works,
   Contact,
   Footer,
+  Testimonial,
 } from "../components"
 import { images } from "../constants"
 
@@ -44,7 +45,7 @@ const Home: NextPage = () => {
       <div id="Works">
         <Works />
       </div>
-      {/* <Socialmedia /> */}
+      <Testimonial />
       <div id="Contact" className="">
         <Contact />
       </div>

@@ -51,27 +51,27 @@ module.exports = {
           "0%": {
             opacity: 0,
             filter: "blur(20px)",
-            transform: "translateY(-100px) skewY(10deg) skewx(10deg) rotateZ(30deg)",
+            transform: "translateY(-100px) ",
           },
           "25%": {
             opacity: 1,
             filter: "blur(0px)",
-            transform: "translateY(0px) skewY(0deg) skewx(0deg) rotateZ(0deg)",
+            transform: "translateY(0px) ",
           },
           "75%": {
             opacity: 1,
             filter: "blur(0px)",
-            transform: "translateY(0px) skewY(0deg) skewx(0deg) rotateZ(0deg)",
+            transform: "translateY(0px) ",
           },
           "100%": {
             opacity: 0,
-            filter: "blur(30px)",
+            filter: "blur(0px)",
             // transform: "translateY(-100px)",
           },
         },
       },
       animation: {
-        "words-anim": "words 3.5s ease-in-out infinite",
+        "words-anim": "words 2.5s ease-in-out infinite",
       },
     },
   },

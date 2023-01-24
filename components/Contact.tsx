@@ -113,7 +113,7 @@ const Contact = () => {
                     href={link.href}
                     target="_blank"
                     key={i}
-                    className="w-8 md:w-12 mr-8 cursor-pointer text-slate-500 hover:text-orange-600 transition-all delay-200"
+                    className="w-8 md:w-12 mx-4 cursor-pointer text-slate-500 hover:text-orange-600 transition-all delay-200"
                   >
                     {link.child}
                   </Link>

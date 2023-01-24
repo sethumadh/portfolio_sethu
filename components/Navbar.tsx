@@ -18,7 +18,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
   const scrollDirection = useScrollDirection()
   const [toggleMenu, setToggleMenu] = useState(false)
   const dynamicNavbarBG = !isTopOfPage
-    ? "[#FFFAE9] shadow-md shadow-slate-400 "
+    ? "[#FFFAE9] shadow-xs shadow-slate-400 "
     : ""
   console.log(scrollDirection)
 
@@ -32,7 +32,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
         hidden: { opacity: 0, x: 0 },
         visible: { opacity: 1, x: 0 },
       }}
-      className={`navbar bg-blue h-[70px] md:h-[70px] flex flex-row justify-end items-center backdrop-blur-lg fixed top-0 right-0 left-0 z-20 md:py-4 bg-${dynamicNavbarBG} ${
+      className={`navbar font-mulish bg-gray-900 h-[70px] md:h-[70px] flex flex-row justify-end items-center backdrop-blur-lg fixed top-0 right-0 left-0 z-20 md:py-4 bg-${dynamicNavbarBG} ${
         scrollDirection == "down" && !toggleMenu
           ? "-top-28 md:-top-28"
           : "top-0"
@@ -46,13 +46,16 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
           // offset={50}
           // duration={500}
         >
-          <h1>SM</h1>
+          <div className="font-mada relative">
+            Sethu
+            <div className=" h-[20.5px] w-[100%] bg-orange-600 absolute right-0 bottom-0 -z-30"></div>
+          </div>
         </Link>
-        <ul className="links hidden w-full md:flex md:flex-row md:items-center md:justify-end ">
+        <ul className="links hidden w-full md:flex md:flex-row md:items-center md:justify-end  ">
           {links.map((link, i) => (
             <li
               key={i}
-              className="text-white xl:pl-20 lg:pl-16 md:pl-12 cursor-pointer capitalize font-medium tracking-[2px] hover:scale-105 duration-250 text-2xl"
+              className="font-mada  text-white xl:pl-20 lg:pl-16 md:pl-12 cursor-pointer capitalize font-medium tracking-[2px] hover:scale-105 duration-250 text-2xl"
             >
               <Link
                 href={`/#${link}`}
@@ -66,7 +69,10 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
                 }
                 // onClick={() => setActivePage(link)}
               >
-                {link}
+                <div className="border border-red relative">
+                  {link}
+                  <div className=" h-[10.5px] w-[100%] bg-orange-600 absolute right-0 bottom-0 -z-30"></div>
+                </div>
               </Link>
             </li>
           ))}

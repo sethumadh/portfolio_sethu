@@ -65,7 +65,7 @@ function About({ setActivePage }: AboutProps) {
   // The counter
   const [count, setCount] = useState<number>(0)
   // Dynamic delay
-  const [delay, setDelay] = useState<number>(3500)
+  const [delay, setDelay] = useState<number>(2500)
   // ON/OFF
   const [isPlaying, setPlaying] = useState<boolean>(true)
   const [item, setItem] = useState("autodidact")
@@ -161,7 +161,7 @@ function About({ setActivePage }: AboutProps) {
               </span>{" "}</Link>
               & coffee{"   "}
               <span className="inline-block text-center px-1">
-                <Image src={images.coffee} alt="coffee" width={40} />{" "}
+                <Image src={images.coffeemug} alt="coffee" width={40} />{" "}
               </span>
             </div>
           </div>{" "}
