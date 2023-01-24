@@ -3,7 +3,7 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
-    "extends": "plugin:react/recommended",
+    "extends": "next",
     "overrides": [
     ],
     "parser": "@typescript-eslint/parser",
@@ -16,5 +16,8 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-    }
+        "react/no-unescaped-entities": "off",
+        "@next/next/no-page-custom-font": "off"
+    },
+    
 }
