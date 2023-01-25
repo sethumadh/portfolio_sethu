@@ -31,6 +31,7 @@ module.exports = {
         contactbg1: "url('../public/contactbg1.png')",
         mainbg1: "url('../public/bg3.png')",
         bgWhite: "url('../public/bgWhite.png')",
+        bgspace: "url('../public/bgspace.jpg')",
       }),
       fontFamily: {
         opensans: ["Open Sans", "sans-serif"],
@@ -50,7 +51,7 @@ module.exports = {
         words: {
           "0%": {
             opacity: 0,
-            filter: "blur(20px)",
+            filter: "blur(30px)",
             transform: "translateY(-100px) ",
           },
           "25%": {
@@ -71,7 +72,7 @@ module.exports = {
         },
       },
       animation: {
-        "words-anim": "words 2.5s ease-in-out infinite",
+        "words-anim": "words 3.5s ease-in-out infinite",
       },
     },
   },

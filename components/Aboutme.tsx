@@ -85,7 +85,7 @@ function Aboutme() {
   ]
 
   return (
-    <section className={`Aboutme w-screen bg-bgWhite `}>
+    <section className={`Aboutme bg-bgWhite `}>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -95,7 +95,7 @@ function Aboutme() {
           hidden: { opacity: 0.2, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="w-[85%] mx-auto mt-8 md:mt-12"
+        className="w-[90%] max-w-7xl mx-auto mt-8 md:mt-12"
       >
         {" "}
         <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 pt-8 pb-4">
@@ -146,7 +146,7 @@ function Aboutme() {
           </div>
         </div>
         <div className=" mt-8">
-          <div className="flex justify-center md:justify-start text-2xl sm:text-3xl font-semibold tracking-wide py-4">
+          <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide py-4">
             <div className="mr-3">My </div>
             <div className="relative">
               Toolbox

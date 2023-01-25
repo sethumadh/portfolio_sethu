@@ -38,7 +38,7 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
           : "top-0"
       } transition-all duration-750`}
     >
-      <div className="w-[95%] flex flex-row items-center justify-between mx-auto">
+      <div className="w-[95%] max-w-7xl flex flex-row items-center justify-between mx-auto">
         <Link
           className="signature text-white md:text-6xl text-4xl font-playfair font-semibold cursor-pointer"
           href="/"
@@ -46,9 +46,9 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
           // offset={50}
           // duration={500}
         >
-          <div className="font-mada relative">
+          <div className="font-mada text-3xl relative">
             Sethu
-            <div className=" h-[20.5px] w-[100%] bg-orange-600 absolute right-0 bottom-0 -z-30"></div>
+            <div className=" h-[10.5px] w-[100%] bg-orange-600 absolute right-0 bottom-1 -z-30"></div>
           </div>
         </Link>
         <ul className="links hidden w-full md:flex md:flex-row md:items-center md:justify-end  ">
@@ -69,9 +69,9 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
                 }
                 // onClick={() => setActivePage(link)}
               >
-                <div className="border border-red relative">
+                <div className=" relative">
                   {link}
-                  <div className=" h-[10.5px] w-[100%] bg-orange-600 absolute right-0 bottom-0 -z-30"></div>
+                  <div className=" h-[10.5px] w-[100%] bg-orange-600 absolute right-0 bottom-1 -z-30"></div>
                 </div>
               </Link>
             </li>

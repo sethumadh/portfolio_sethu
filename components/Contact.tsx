@@ -47,7 +47,7 @@ const Contact = () => {
   ]
 
   return (
-    <section className={`Aboutme w-screen bg-bgWhite `}>
+    <section className={`Aboutme bg-bgWhite `}>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -57,7 +57,7 @@ const Contact = () => {
           hidden: { opacity: 0.2, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="w-[85%] mx-auto mt-8 md:mt-12 "
+        className="w-[90%] md:w-[60%]  max-w-7xl mx-auto mt-8 md:mt-12 "
       >
         <div className="flex flex-col md:flex-row md:justify-center">
           <div className="flex flex-col w-full md:w-[50%] mx-auto">
@@ -123,7 +123,7 @@ const Contact = () => {
 
             <div className="max-w-[100px] md:max-w-[200px] mx-auto flex items-end">
               <Image
-                src={images.coffeemug}
+                src={images.coffee}
                 alt="coffee mug"
                 className="w-full"
               />

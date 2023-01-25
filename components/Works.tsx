@@ -9,7 +9,7 @@ import LineGradient from "./LineGradient"
 function Works() {
   const projectLinks = [
     {
-      src: images.musicplayer,
+      src: images.lyrikslt,
       title: "Lyriks",
       subtitle: "- Modern Music Player",
       role: "Front End Next Js Developer/Team Lead",
@@ -19,7 +19,7 @@ function Works() {
       gitUrl: "https://github.com/sethumadh/Modern-Music-Player",
     },
     {
-      src: images.filmpire,
+      src: images.filmpirelt  ,
       title: "Filmpire",
       subtitle: "- World of Movies",
       role: "Front End React Js Developer",
@@ -29,7 +29,7 @@ function Works() {
       gitUrl: "https://github.com/sethumadh/Filmpire_sethumadh",
     },
     {
-      src: images.carrental,
+      src: images.morentlt,
       title: "Morent",
       subtitle: "- Modern Car Rental Application",
       role: "Full Stack Developer",
@@ -56,7 +56,7 @@ function Works() {
     // },
   ]
   return (
-    <section className={`works w-screen bg-white `}>
+    <section className={`works bg-white `}>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -66,7 +66,7 @@ function Works() {
           hidden: { opacity: 0.2, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="w-[85%] mx-auto mt-8 md:mt-12"
+        className="w-[90%] max-w-7xl mx-auto mt-8 md:mt-12"
       >
         <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 pt-8 pb-4">
           <div className="mr-3">Featured</div>
@@ -82,14 +82,14 @@ function Works() {
               key={link.title}
             >
               <div className="flex flex-col w-full md:w-[55%] mb-8 ">
-                <h1 className="px-4 py-2 text-2xl md:text-4xl font-semibold md:font-bold tracking-wide text-center md:text-left italic">
+                <h1 className="px-4 md:px-0 md:pr-4 py-2 text-2xl sm:text-4xl font-semibold md:font-bold tracking-wide text-center md:text-left italic">
                   {link.title}{" "}
                   <span className="text-xl md:text-2xl">{link.subtitle}</span>
                 </h1>
-                <h1 className="px-4 py-2 text-sm md:text-base font-light md:font-semibold tracking-wide text-center  md:text-left">
+                <h1 className="px-4 md:px-0 md:pr-4 py-2 text-sm md:text-base font-light md:font-semibold tracking-wide text-center  md:text-left">
                   {link.role}
                 </h1>
-                <div className="flex flex-wrap justify-center md:justify-start px-4 py-2 ">
+                <div className="flex flex-wrap justify-center md:justify-start px-4 md:px-0 md:pr-4 py-2 ">
                   {link.tech.map((item, i) => (
                     <div
                       key={i}
@@ -99,7 +99,7 @@ function Works() {
                     </div>
                   ))}
                 </div>
-                <div className="mb-2 md:mb-4 px-4 py-2">
+                <div className="mb-2 md:mb-4 px-4 md:px-0 md:pr-4 py-2">
                   <p className="leading-loose tracking-wide">{link.body}</p>
                 </div>
                 <div className="flex mx-auto items-center justify-between mb-3 md:mb-0 ">
@@ -125,7 +125,7 @@ function Works() {
                 </div>
               </div>
 
-              <div className=" w-full max-w-lg mx-auto h-full md:w-[45%] hover:drop-shadow-2xl hover:shadow-black hover:shadow-2xl ">
+              <div className=" w-full max-w-xl pb-4 md:py-4 mx-auto my-auto h-full md:w-xl flex items-center ">
                 <Image src={link.src} alt="music" className="w-full rounded" />
               </div>
             </div>

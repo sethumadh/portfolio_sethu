@@ -30,7 +30,7 @@ const Home: NextPage = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
   return (
-    <div className="w-full min-h-screen " id="Home">
+    <div className=" min-h-screen " id="Home">
       <Head>
         <title>Sethu&apos;s Portfolio</title>
       </Head>

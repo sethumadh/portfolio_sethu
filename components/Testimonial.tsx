@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
-import { FcApprove, FcAlarmClock } from "react-icons/fc"
 
 import LineGradient from "./LineGradient"
 import Image from "next/image"
@@ -51,12 +50,12 @@ function Testimonial() {
       work: "Worked together in Morent Project- Open Source / Remote project",
       work1: "Team Member- Morent Project",
       smallContent: `"During my time working on CarRental, I had the pleasure of working alongside Sethu. I was impressed by his ability to communicate his problems and in the same breath find the solution to it. Sethu`,
-      extraContent: `is more than capable of writing clean and effective code.Sethu has great understanding of Javascript and React hooks and has the trait of a developer who goes beyond. I highly recommend Sethu because I believe he would make a fine addition to anyone's team"`,
+      extraContent: `is more than capable of writing clean and effective code. Sethu has great understanding of Javascript and React hooks and has the trait of a developer who goes beyond. I highly recommend Sethu because I believe he would make a fine addition to anyone's team"`,
     },
   ]
 
   return (
-    <section className={`works w-screen bg-white `}>
+    <section className={`works bg-white `}>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -66,7 +65,7 @@ function Testimonial() {
           hidden: { opacity: 0.2, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="w-[85%] mx-auto mt-8 md:mt-12"
+        className="w-[90%] max-w-7xl mx-auto mt-8 md:mt-12"
       >
         {" "}
         <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 pt-8 pb-4">
@@ -80,7 +79,7 @@ function Testimonial() {
             <div key={i} className="flex flex-col md:flex-row">
               <div
                 className={`
-                 md:max-w-5xl md:w-3/4  leading-loose tracking-wide font-mulish flex-1  flex flex-col md:flex-row  justify-start items-center px-4 py-4 rounded`}
+                 md:max- md:w-full  leading-loose tracking-wide font-mulish flex-1  flex flex-col md:flex-row  justify-start items-center md:pr-4 py-4 rounded`}
               >
                 <Link
                   href={link.href}
@@ -104,10 +103,9 @@ function Testimonial() {
                 </Link>
                 <div className="text-center flex md:hidden justify-center items-center mx-auto font-mulish max-w-lg mb-6 md:mb-12 ">
                   <div className="font-semibold font-mulish text-lg italic text-center leading-relaxed tracking-wide max-w-sm ">
-                    {link.work1}
                   </div>
                 </div>
-                <div className="text-center flex justify-center mx-auto font-mulish max-w-lg">
+                <div className="text-center flex justify-center items-center mx-auto font-mulish max-w-4xl">
                   <div className="font-light text-lg italic text-center leading-relaxed tracking-wide ">
                     {link.smallContent}
 
@@ -119,11 +117,6 @@ function Testimonial() {
                       {link.readMore ? "Read Less" : "Read More"}
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="text-center hidden md:flex justify-center items-center mx-auto font-mulish max-w-lg">
-                <div className="font-semibold font-mulish text-lg italic text-center leading-relaxed tracking-wide max-w-sm ">
-                  {link.work}
                 </div>
               </div>
             </div>
