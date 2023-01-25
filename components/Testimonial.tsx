@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
+import { FcApprove, FcAlarmClock } from "react-icons/fc"
 
 import LineGradient from "./LineGradient"
 import Image from "next/image"
