@@ -65,7 +65,7 @@ function About({ setActivePage }: AboutProps) {
   // The counter
   const [count, setCount] = useState<number>(0)
   // Dynamic delay
-  const [delay, setDelay] = useState<number>(2500)
+  const [delay, setDelay] = useState<number>(3500)
   // ON/OFF
   const [isPlaying, setPlaying] = useState<boolean>(true)
   const [item, setItem] = useState("autodidact")
@@ -88,7 +88,7 @@ function About({ setActivePage }: AboutProps) {
   )
 
   return (
-    <section className=" w-full min-h-screen flex flex-col justify-center items-center bg-gray-900 bg-no-repeat pt-24">
+    <section className=" min-h-screen flex flex-col justify-center items-center bg-bgspace bg-no-repeat pt-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -98,7 +98,7 @@ function About({ setActivePage }: AboutProps) {
           hidden: { opacity: 0, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
-        className=" w-[90%] mx-auto flex items-center "
+        className=" w-[90%] max-w-7xl mx-auto flex items-center "
       >
         {" "}
         <div className="w-full mx-auto pt-8 text-white font-semibold text-[42px]  sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
@@ -108,23 +108,23 @@ function About({ setActivePage }: AboutProps) {
           <div>
             {" "}
             <span className="font-semibold flex flex-wrap items-center">
-              <div className="pr-4 flex justify-center md:justify-start font-semibold text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
+              <div className="pr-4 flex justify-center md:justify-start font-semibold text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-normal tracking-wide ">
                 <div className="relative">
                   Engineer
-                  <div className="h-[20.5px] w-[100%] bg-orange-500 absolute right-0 bottom-2 -z-30"></div>
+                  <div className="h-1/2 w-[100%] bg-orange-500 absolute right-0 bottom-0 -z-30"></div>
                 </div>
               </div>
               <span className="pr-4 font-semibold text-[42px]  sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide">
                 turned
               </span>
               <br/>
-              <div className="pr-4 flex justify-center md:justify-start font-semibold text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-relaxed tracking-wide ">
+              <div className="pr-4  flex justify-center md:justify-start font-semibold text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-normal tracking-wide ">
                 <div className="relative">
                   Developer
-                  <div className="h-[20.5px] w-[100%] bg-orange-500 absolute right-0 bottom-2 -z-30"></div>
+                  <div className="h-1/2 w-[100%] bg-orange-500 absolute right-0 bottom-0 -z-30"></div>
                 </div>
               </div>
-              <span className=" font-medium">and</span>
+              <span className=" font-medium ">&</span>
             </span>{" "}
             <div className="flex items-center mt-4 pt-2">
               <span
@@ -137,7 +137,7 @@ function About({ setActivePage }: AboutProps) {
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-start items-center ">
+          <div className="flex flex-row justify-start items-center mt-4 ">
             {links.map((link, i) => (
               <Link
                 href={link.href}
@@ -149,19 +149,21 @@ function About({ setActivePage }: AboutProps) {
               </Link>
             ))}
           </div>
-          <div className="max-w-3xl text-base font-light md:text-2xl lg:text-3l xl:text-4xl leading-loose tracking-wide ">
+          <div className="max-w-4xl text-base font-light md:text-2xl lg:text-3l xl:text-4xl leading-loose tracking-wide my-6 ">
             <span>I love exploring and creating </span>
             <span className="text-center inline-block px-2">
-              <Image src={images.tech} alt="tech" width={40} />{" "}
+              {/* <Image src={images.tech} alt="tech" width={40} />{" "} */}
+              🚀
             </span>{" "}
-            <div className="inline">
+            <div className="inline leading-relaxed tracking-wide  ">
               I am a life long learner and I might have a thing for <Link className="text-orange-600 font-semibold italic" href={`https://www.google.com/search?q=sadhya&sxsrf=AJOqlzVGp2OxyFqjYfjOZ9kkeBCJZ7fU8A%3A1674473060607&ei=ZG7OY5XcJLaRjuMP9PWxkAs&ved=0ahUKEwiVntqfyt38AhW2iGMGHfR6DLIQ4dUDCA8&oq=sadhya&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQDEoECEEYAEoECEYYAFAAWABgAGgAcAF4AIABAIgBAJIBAJgBAA&sclient=gws-wiz-serp`}> Sadya{" "}
               <span className="inline-block text-center px-2">
-                <Image src={images.sadya} alt="grill" width={40} />{" "}
+                <Image src={images.sadya} alt="sadya" width={30} />{" "}
               </span>{" "}</Link>
               & coffee{"   "}
               <span className="inline-block text-center px-1">
-                <Image src={images.coffeemug} alt="coffee" width={40} />{" "}
+                {/* <Image src={images.coffeemug} alt="coffee" width={40} />{" "} */}
+                ☕
               </span>
             </div>
           </div>{" "}

@@ -127,7 +127,8 @@ function ProjectDetails({}: Props) {
        was using to code and test the state management and
       custom endpoints using redux toolkit query. I made some face-lifts
       on this design and worked on other functionalities which were initially
-      assigned to other members like creating the music player, genres listing search function and overall design and coded for the next 8 days through
+      assigned to other members like creating the music player, genres listing search function and
+       overall design and coded for the next 8 days through
       and through. I was able to showcase the music app albeit with some
       design flaws but a great working music app with search functions,
       genres and related songs displayed and also a custom made music
@@ -211,7 +212,7 @@ function ProjectDetails({}: Props) {
   const projectId = router.query.projectId
   return (
     <section
-      className={`works w-screen bg-white pt-10 md:pt-2 font-muli text-xl font-light`}
+      className={`works  bg-white pt-10 md:pt-2 font-muli text-xl font-light`}
     >
       {/* Filmpire application */}
 
@@ -225,7 +226,7 @@ function ProjectDetails({}: Props) {
             hidden: { opacity: 0.2, x: 0 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="w-[85%] md:w-[70%] mx-auto mt-8 md:mt-12 md:px-8 md:py-8"
+          className="w-[85%] max-w-7xl md:w-[70%] mx-auto mt-8 md:mt-12 md:px-8 md:py-8"
         >
           <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-4 pt-8 pb-4">
             <div className="relative  text-2xl md:text-4xl font-semibold md:font-bold tracking-wide text-center md:text-left italic">
@@ -401,11 +402,32 @@ function ProjectDetails({}: Props) {
               />
               <p className="text-sm mt-1">{projectId} landing page</p>
             </div>
+            <div className="w-full md:w-1/3 flex flex-col items-center mx-auto">
+              {/* status */}
+              <h1 className="text-lg md:text-xl font-semibold md:font-bold tracking-wide text-center italic py-4">
+                Status
+              </h1>
+              <div className="flex mx-auto items-center justify-center mb-3 md:mb-0">
+                <Link
+                  href={Lyriks[0].gitUrl}
+                  className="mr-12 text-sm md:text-base relative -top-1 -left-1 bg-orange-700 py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-2 before:left-2 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0 duration-300"
+                >
+                  Github Code
+                </Link>
+                <Link
+                  target={`_blank`}
+                  href={Lyriks[0].liveUrl}
+                  className="relative text-sm md:text-base -top-1 -left-1 bg-orange-700 py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-2 before:left-2 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0 duration-300"
+                >
+                  Live
+                </Link>
+              </div>
+            </div>
 
             <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-1 md:mb-4 pt-8 pb-4">
               <div className="relative  text-xl md:text-2xl font-semibold md:font-bold tracking-wide text-center md:text-left italic">
                 Project Objective
-                <div className="h-[8.5px] w-[100%] bg-blue absolute right-0 bottom-0 -z-30"></div>
+                <div className="h-[13.5px] w-[100%] bg-blue absolute right-0 bottom-0 -z-30"></div>
               </div>
             </div>
             <div className="leading-relaxed tracking-wide mb-2 md:mb-4">
@@ -423,7 +445,7 @@ function ProjectDetails({}: Props) {
               {Lyriks[0].webStack}
             </div>
             <div className="flex flex-col md:flex-row justify-around my-4  h-[250px] md:h-auto">
-              <div className="w-full md:w-1/3">
+              <div className="w-full ">
                 <h1 className="text-lg md:text-xl font-semibold md:font-bold tracking-wide text-center md:text-left italic py-4">
                   Stack
                 </h1>
@@ -438,28 +460,6 @@ function ProjectDetails({}: Props) {
                     </div>
                   ))}
                 </ul>
-              </div>
-
-              <div className="w-full md:w-1/3">
-                {/* status */}
-                <h1 className="text-lg md:text-xl font-semibold md:font-bold tracking-wide text-center md:text-left italic py-4">
-                  Status
-                </h1>
-                <div className="flex mx-auto items-center justify-center mb-3 md:mb-0">
-                  <Link
-                    href={Lyriks[0].gitUrl}
-                    className="mr-12 text-sm md:text-base relative -top-1 -left-1 bg-orange-700 py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-2 before:left-2 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0 duration-300"
-                  >
-                    Github Code
-                  </Link>
-                  <Link
-                    target={`_blank`}
-                    href={Lyriks[0].liveUrl}
-                    className="relative text-sm md:text-base -top-1 -left-1 bg-orange-700 py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-2 before:left-2 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0 duration-300"
-                  >
-                    Live
-                  </Link>
-                </div>
               </div>
             </div>
             <div className="flex justify-center md:justify-start text-2xl sm:text-4xl font-semibold tracking-wide mb-1 md:mb-4 pt-8 pb-4">

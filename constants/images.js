@@ -41,9 +41,13 @@ import lk from "../assets/lk.png"
 import mr from "../assets/mr.png"
 import coffeemug from "../assets/coffeemug.svg"
 import sadya from "../assets/sadya.png"
+import filmpirelt from "../assets/filmpirelt.png"
+import lyrikslt from "../assets/lyrikslt.png"
+import morentlt from "../assets/morentlt.png"
 
 import contactProject from "../assets/contactProject.jpg"
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   js,
   mongodb,
@@ -88,6 +92,8 @@ export default {
   lk,
   mr,
   coffeemug,
-  sadya
-  
+  sadya,
+  filmpirelt,
+  lyrikslt,
+  morentlt
 }

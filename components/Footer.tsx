@@ -5,7 +5,7 @@ import { Socialmedia } from "./index"
 
 const Footer = () => {
   return (
-    <section className={`works w-screen bg-blue `}>
+    <section className={`works bg-gray-900 text-white `}>
       <motion.footer
         initial="hidden"
         whileInView="visible"
@@ -15,7 +15,7 @@ const Footer = () => {
           hidden: { opacity: 0.2, x: 0 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="w-[85%] mx-auto   mt-8 md:mt-12"
+        className="w-[95%] max-w-7xl mx-auto   mt-8 md:mt-12"
       >
         <div className="flex flex-col md:flex-row justify-around items-end py-4">
             <p className="font-mulish font-semibold text-xl w-full flex justify-center">
