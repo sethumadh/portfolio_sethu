@@ -125,9 +125,9 @@ function Works() {
                 </div>
               </div>
 
-              <div className=" w-full max-w-xl pb-4 md:py-4 mx-auto my-auto h-full md:w-xl flex items-center ">
+              <Link href={link.liveUrl} target="_blank" className=" w-full max-w-xl pb-4 md:py-4 mx-auto my-auto h-full md:w-xl flex items-center ">
                 <Image src={link.src} alt="music" className="w-full rounded" />
-              </div>
+              </Link >
             </div>
           ))}
         </div>
