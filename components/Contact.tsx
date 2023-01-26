@@ -44,6 +44,17 @@ const Contact = () => {
       url: "mailto:sethumadh@gmail.co",
       style: "bg-[#6fc2b0]",
     },
+    {
+      id: 4,
+      child: (
+        <h1 className="font-bold text-4xl">
+          CV
+        </h1>
+      ),
+      href: "https://drive.google.com/file/d/1y6HorM1qunKMRlCfTIX54pobqkoiyJDq/view?usp=share_link",
+      url: "mailto:sethumadh@gmail.co",
+      style: "bg-[#6fc2b0]",
+    },
   ]
 
   return (
@@ -113,7 +124,7 @@ const Contact = () => {
                     href={link.href}
                     target="_blank"
                     key={i}
-                    className="w-8 md:w-12 mx-4 cursor-pointer text-slate-500 hover:text-orange-600 transition-all delay-200"
+                    className="w-8 md:w-12 mx-3 cursor-pointer text-slate-500 hover:text-orange-600 transition-all delay-200 flex justify-center items-center"
                   >
                     {link.child}
                   </Link>

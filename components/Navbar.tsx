@@ -104,13 +104,14 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
             </div>
 
             <ul className="mt-4 flex flex-col space-y-6 cursor-pointer">
-              {links.map((link, i) => (
+              {navLinks.map((link, i) => (
                 <li
                   key={i}
                   className=" cursor-pointer capitalize font-medium hover:scale-105 duration-250 z-20 "
                 >
                   <Link
-                    href={`/#${link}`}
+                    href={`${link.nav!="Resume"?`/#${link.href}`:`${link.href}`}`}
+                    target={link.target}
                     // smooth={true}
                     // offset={-100}
                     // duration={500}
@@ -118,13 +119,9 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
                       setToggleMenu(!toggleMenu)
                       // setActivePage(link)
                     }}
-                    className={
-                      activePage == link
-                        ? "border-b-4 border-gray-600 pb-0 rounded-l-md rounded-r-md"
-                        : ""
-                    }
+                    
                   >
-                    {link}
+                    {link.nav}
                   </Link>
                 </li>
               ))}

@@ -2,6 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 
 import { Socialmedia } from "./index"
+import Link from "next/link"
 
 const Footer = () => {
   return (
@@ -18,9 +19,9 @@ const Footer = () => {
         className="w-[95%] max-w-7xl mx-auto   mt-8 md:mt-12"
       >
         <div className="flex flex-col md:flex-row justify-around items-end py-4">
-            <p className="font-mulish font-semibold text-xl w-full flex justify-center">
+            <Link href={`/`} className="font-mulish font-semibold text-xl w-full flex justify-center">
               SethuMadhavan (aka Sethu)
-            </p>
+            </Link>
             <p className="font-playfair text-xs md:text-lg font-semibold w-full flex justify-center ">
               ©2023 Powered by Next JS, TypeScript & Tailwind.
             </p>
