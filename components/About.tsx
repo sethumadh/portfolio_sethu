@@ -18,12 +18,12 @@ type AboutProps = {
 function About({ setActivePage }: AboutProps) {
   const words = [
     { w: "an athlete 🏓", src: images.athlete },
-    { w: "an optimist 🙌", src: images.optimist },
-    { w: "a pluviophile ☔", src: images.rain },
-    { w: "loves history 🏛️", src: images.history },
-    { w: "an autodidact 🧑🏻‍🔧", src: images.learner },
-    { w: "a traveller 🏕️", src: images.travel },
     { w: "an astrophile 🌌", src: images.travel },
+    { w: "an optimist 🙌", src: images.optimist },
+    { w: "an autodidact 🧑🏻‍🔧", src: images.learner },
+    { w: "a pluviophile ☔", src: images.rain },
+    { w: "a traveller 🏕️", src: images.travel },
+    { w: "loves history 🏛️", src: images.history },
   ]
 
   const links = [
@@ -124,7 +124,7 @@ function About({ setActivePage }: AboutProps) {
                   <div className="h-2/5 w-[100%] bg-orange-500 absolute right-0 bottom-0 -z-30"></div>
                 </div>
               </div>
-              <span className=" font-medium ">and</span>
+              <span className=" font-medium ">&</span>
             </span>{" "}
             <div className="flex items-center mt-4 pt-2">
               <span
