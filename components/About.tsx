@@ -18,12 +18,12 @@ type AboutProps = {
 function About({ setActivePage }: AboutProps) {
   const endLine = `I love Exploring and creating  I am a life long learner and I might have a thing for grill and coffee `
   const words = [
-    { w: "an athlete", src: images.athlete },
-    { w: "an optimist", src: images.optimist },
-    { w: "a pluviophile", src: images.rain },
-    { w: "loves history", src: images.history },
-    { w: "an autodidact", src: images.learner },
-    { w: "a traveller", src: images.travel },
+    { w: "an athlete 🏓", src: images.athlete },
+    { w: "an optimist 🙌", src: images.optimist },
+    { w: "a pluviophile ☔", src: images.rain },
+    { w: "loves history 🏛️", src: images.history },
+    { w: "an autodidact 🧑🏻‍🔧", src: images.learner },
+    { w: "a traveller 🏕️", src: images.travel },
   ]
 
   const links = [
@@ -68,7 +68,7 @@ function About({ setActivePage }: AboutProps) {
   const [delay, setDelay] = useState<number>(3500)
   // ON/OFF
   const [isPlaying, setPlaying] = useState<boolean>(true)
-  const [item, setItem] = useState("autodidact")
+  const [item, setItem] = useState("autodidact 🧑🏻‍🔧")
   const [icon, setIcon] = useState(images.learner)
 
   useInterval(
@@ -133,7 +133,7 @@ function About({ setActivePage }: AboutProps) {
                 {item}{" "}
               </span>
               <div className={`animate-words-anim `}>
-                <Image src={icon} width={30} alt="icon" />
+                {/* <Image src={icon} width={30} alt="icon" /> */}
               </div>
             </div>
           </div>
