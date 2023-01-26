@@ -26,7 +26,7 @@ function Works() {
       tech: ["React Js", "MUI", "Redux Toolkit", "Redux Toolkit Query"],
       body: "A Solo project to create core features and integrate third party APIs. Implemented CI/CD pipeline with code linting and preview deploys",
       liveUrl: "https://willowy-nougat-2d34e6.netlify.app/",
-      gitUrl: "https://github.com/sethumadh/Filmpire_sethumadh",
+      gitUrl: " ",
     },
     {
       src: images.morentlt,
@@ -37,10 +37,10 @@ function Works() {
         "MERN",
         "TypeScript",
         "Stripe for payments",
-        "Google Auth",
+        "Google OAuth",
         "Styled Components",
       ],
-      body: "A Core Member of a 3 member team responsible for creating core functionalities implemented on a custom designed schemausing Mongo DB with back-end created upon Node and Express and using React with tailwind on fron end. Implemented CI/CD pipeline with Typescript type-checking, database migration and code linting",
+      body: "A Core Member of a 3 member team responsible for creating core functionalities implemented on a custom designed schema using Mongo DB with back-end created upon Node and Express and using React with tailwind on fron end. Implemented CI/CD pipeline with Typescript type-checking, database migration and code linting",
       liveUrl: "#",
       gitUrl:
         "https://github.com/sethumadh/MORENT_Modern_Car_Rental_Application",

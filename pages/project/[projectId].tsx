@@ -31,13 +31,9 @@ function ProjectDetails({}: Props) {
         using redux toolkit query. The entire designing of the website done using MUI. The project was to be done within a span of 2
         weeks. It was also required to make use of Alan AI, an AI tool
         for movie fetching.`,
-      webStack: `This project was set to be done using React, Redux and MUI. This
-        project acted as a stepping stone for the future projects that
-        were to be done by me in future. MUI was chosen since it aligns
-        with React in terms of usablity even though MUI is slightly opinionated.
-        Redux toolkit is a go to state management tool for developers so
-        it is imperative that we get skilled in this state management
-        tool.`,
+      webStack:
+        "Built a dynamic single-page UI using React.js that makes use of the virtual DOM and modular, reusable components to keep code maintainable and simple to comprehend for future iterations. Redux Toolkit is used to implement a complex and dynamic frontend that connect to several APIs while maintaining a centralized state and keeping changes mapped to user interface. Used Redux's scalability to increase the application's horizontal growth while avoiding ineffective prop-drilling. Redux toolkit Query is used to retrieve data from TMDB API to cache it for better user experience.	Styled application with MUI for modern design, responsiveness and accessibility on all devices.	Implemented CI/CD pipeline with code linting and preview deploys.",
+
       stack: [
         "React Js",
         "MUI",
@@ -83,14 +79,8 @@ function ProjectDetails({}: Props) {
       npm package or custom made and should render songs related to the
       current on playing. The app should have displayed different genre
       listed in the front page`,
-      webStack: `This project was set to be done using Next Js, Redux and Tailwind.
-      Next Js because it offered powerful SSR and SSG features. They are
-      highly useful in SEO. Redux toolkit was an obvious choice for
-      state management. The choice of Tailwind was a huge milstone for
-      me and it provided such a an intuitive experience in designing.
-      The third party API we chose is Shazam Core API and it provided
-      flexible and easy option for endpoints. Neverthless We also used
-      Redux Toolkit Query for custom made endpoints to use in the app.`,
+      webStack:
+        "Used Next.js for better SEO and server-side rendering to load pages leading to faster page loading times. \n Designed the architecture and lead a team of 4 developers to create core features and integrate third party APIs -Shazam Core API to dynamically render the obtained JSON. Implemented Redux Toolkit to maintain a centralized state and keep changes mapped to UI through a complex and dynamic frontend allowing for connection to multiple APIs. Customized 10+ endpoints using Redux Toolkit Query and cache data for better user experience. Designed UI using Tailwind CSS with accessibility and responsiveness on all devices.	Worked on different branches, making pull requests to resolve merge conflicts and maintain a smooth git workflow.	Implemented CI/CD pipeline with code linting and preview deploys.",
       stack: [
         "Next Js",
         "Tailwind",
@@ -169,15 +159,8 @@ function ProjectDetails({}: Props) {
       payment for renting out. There should be an option to search a car
       based on place/cities and must be able to check out cars between flexible
       dates.`,
-      webStack: `This project was set to be done using React Js, Context API with
-      useReducer and Styled Components. TypeScript was used for the first
-      time and despite it's huge learning curve , We experienced the
-      benefits of type checking and helped us fix bugs as we progressed.
-      Context API was coupled with useReducer to help us achieve a
-      minimalistic but a comprehensive and powerful state management tool. For back
-      end We used Express with Node and MongoDB for database. In essence
-      MERN stack helped us achieve customised schema. Payements and
-      checkout were implemented using stripe payments. Authentication was achieved through Google Auth.`,
+      webStack:
+        "Designed front-end using React with Context API and useReducer for state management and performed API integration of 10+ endpoint. Engineered back-end using Node.js + Express server and modelled database layer with MongoDB and designing functionalities for the project ‘s search, filter, pagination and making use of local storage of the client’s browser for making an item favorite. Designed and implemented a secure google authentication system for both back-end and front-end using GoogleOauth and Passport.js, allowing users to register an account and gain access to additional features. Co-designed the project UI interface and navigation for both Desktop and Mobile responsiveness using styled-Components. Implemented CI/CD pipeline with Typescript type-checking, code linting and preview deploys.",
       stack: [
         "React Js",
         "TypeScript",
@@ -186,7 +169,7 @@ function ProjectDetails({}: Props) {
         "MongoDB",
         "Stripe",
         "eslint",
-        "GoogleAuth",
+        "Google OAuth",
         "Styled Components",
       ],
       gitUrl: "https://github.com/sethumadh/Modern-Music-Player",

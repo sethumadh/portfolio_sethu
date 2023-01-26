@@ -51,7 +51,7 @@ module.exports = {
         words: {
           "0%": {
             opacity: 0,
-            filter: "blur(30px)",
+            filter: "blur(50px)",
             transform: "translateY(-100px) ",
           },
           "25%": {
@@ -72,7 +72,7 @@ module.exports = {
         },
       },
       animation: {
-        "words-anim": "words 3.5s ease-in-out infinite",
+        "words-anim": "words 2.5s ease-in-out infinite",
       },
     },
   },

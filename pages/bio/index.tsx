@@ -64,7 +64,13 @@ function Bio({}: Props) {
         </h1>
         <h2 className="mt-4 py-2 text-lg">
           Looking for my{" "}
-          <Link href={"#"} className="text-orange-500 font-bold pt-4">
+          <Link
+            href={
+              "https://drive.google.com/file/d/1y6HorM1qunKMRlCfTIX54pobqkoiyJDq/view?usp=share_link"
+            }
+            target="_blank"
+            className="text-orange-500 font-bold pt-4"
+          >
             CV
           </Link>
           ?
@@ -73,25 +79,37 @@ function Bio({}: Props) {
           My quick story
         </h1>
         <p className="font-mulish text-xl leading-loose tracking-wide font-light">
-          <strong className="font-bold text-xl">I have been building web stuff and solving problems</strong> since I was 14
-          years-old. Back in those days I tinkered endlessly with Basic, C & C++
-          and tried to solve data structure algorithms. When social media came
-          around <strong className="font-bold text-xl">I was making static websites </strong>which looked
-          stunning (younger me thought so) with my sick{" "}
-          <strong className="font-bold text-xl">html / CSS skills </strong> and occasionaly built sites using
-          Wordpress.
+          <strong className="font-bold text-xl">
+            I have been building web stuff and solving problems
+          </strong>{" "}
+          since I was 14 years-old. Back in those days I tinkered endlessly with
+          Basic, C & C++ and tried to solve data structure algorithms. When
+          social media came around{" "}
+          <strong className="font-bold text-xl">
+            I was making static websites{" "}
+          </strong>
+          which looked stunning (younger me thought so) with my sick{" "}
+          <strong className="font-bold text-xl">html / CSS skills </strong> and
+          occasionaly built sites using Wordpress.
         </p>
         <br />
         <p className="font-mulish font-light text-xl leading-loose tracking-wide">
-          <strong className="font-bold text-xl"> Since then I haven’t stopped learning and creating.</strong>{" "}
-          I am involved in, photography, electronic engineering,
-          programming, video productiona and short film post-production.
+          <strong className="font-bold text-xl">
+            {" "}
+            Since then I haven’t stopped learning and creating.
+          </strong>{" "}
+          I am involved in, photography, electronic engineering, programming,
+          video productiona and short film post-production.
           <br /> <br /> I have been{" "}
-          <strong className="font-bold text-xl">increasingly working on software development</strong> in my
-          life for that last 2 years. I’ve been lucky to have worked alongside
-          awesome developers and designers through open source and bootcamp, who
-          have{" "}
-          <strong className="font-bold text-xl">taught me what’s expected from a quality product.</strong>{" "}
+          <strong className="font-bold text-xl">
+            increasingly working on software development
+          </strong>{" "}
+          in my life for that last 2 years. I’ve been lucky to have worked
+          alongside awesome developers and designers through open source and
+          bootcamp, who have{" "}
+          <strong className="font-bold text-xl">
+            taught me what’s expected from a quality product.
+          </strong>{" "}
         </p>
         <br />
         <br />
@@ -99,11 +117,17 @@ function Bio({}: Props) {
           As a developer
         </h1>
         <p className="font-mulish font-light text-lg leading-loose tracking-wide">
-          I pay close <strong className="font-bold text-xl">attention to my code’s readability.</strong> Sure,
-          I’ll put together something as quickly as possible to make it work,
-          but after that I’ll spend a good amount of time commenting and
-          organizing everything. <i className="font-medium">Mi casa es tu casa</i>, I
-          want you to <strong className="font-bold text-xl">feel welcome around my code.</strong>
+          I pay close{" "}
+          <strong className="font-bold text-xl">
+            attention to my code’s readability.
+          </strong>{" "}
+          Sure, I’ll put together something as quickly as possible to make it
+          work, but after that I’ll spend a good amount of time commenting and
+          organizing everything.{" "}
+          <i className="font-medium">Mi casa es tu casa</i>, I want you to{" "}
+          <strong className="font-bold text-xl">
+            feel welcome around my code.
+          </strong>
           <br />
           <strong className="font-bold text-xl">
             Clean, consistent, readable and maintainable code
@@ -114,8 +138,10 @@ function Bio({}: Props) {
         <br />
         <p className="font-mulish font-light text-xl leading-loose tracking-wide">
           I’m excited to work on new projects, because{" "}
-          <strong className="font-bold text-xl">I learn something new every time.</strong> I’m excited for the
-          next challenge!
+          <strong className="font-bold text-xl">
+            I learn something new every time.
+          </strong>{" "}
+          I’m excited for the next challenge!
         </p>
         <br />
         <br />
@@ -124,16 +150,21 @@ function Bio({}: Props) {
         </h1>
         <p className="font-mulish font-light text-xl leading-loose tracking-wide">
           If I had to describe myself in one word, it would be{" "}
-          <strong className="font-bold text-xl">resourceful</strong> . I’ll take a problem, break it into
-          smaller bits and find myself a solution. Creativity and humor has
-          helped me <strong className="font-bold text-xl">sail around tough obstacles.</strong>
+          <strong className="font-bold text-xl">resourceful</strong> . I’ll take
+          a problem, break it into smaller bits and find myself a solution.
+          Creativity and humor has helped me{" "}
+          <strong className="font-bold text-xl">
+            sail around tough obstacles.
+          </strong>
         </p>
         <br />
         <p className="font-mulish font-light text-xl leading-loose tracking-wide">
-          <strong className="font-bold text-xl">I’m curious by nature and I love learning.</strong> I’ve
-          amassed a wide range of skills and interests that when put together,
-          end up feeding my career in one way or another. I’m what they call a{" "}
-          <i>T-shaped individual.</i>{" "}
+          <strong className="font-bold text-xl">
+            I’m curious by nature and I love learning.
+          </strong>{" "}
+          I’ve amassed a wide range of skills and interests that when put
+          together, end up feeding my career in one way or another. I’m what
+          they call a <i>T-shaped individual.</i>{" "}
         </p>
         <br />
         <br />
@@ -141,18 +172,29 @@ function Bio({}: Props) {
           As a colleague
         </h1>
         <p className="font-mulish font-light text-xl leading-loose tracking-wide">
-          I’m a <strong className="font-bold text-xl">team player</strong>, with my background in engineering
-          and video production, I feel comfortable interacting with both the{" "}
-          <strong className="font-bold text-xl">technically oriented people </strong> of the team as well as
-          the <strong className="font-bold text-xl">artistically oriented ones.</strong>I will always go the
-          extra mile to help my team.
+          I’m a <strong className="font-bold text-xl">team player</strong>, with
+          my background in engineering and video production, I feel comfortable
+          interacting with both the{" "}
+          <strong className="font-bold text-xl">
+            technically oriented people{" "}
+          </strong>{" "}
+          of the team as well as the{" "}
+          <strong className="font-bold text-xl">
+            artistically oriented ones.
+          </strong>
+          I will always go the extra mile to help my team.
         </p>
         <br />
         <p className="font-mulish font-light text-xl leading-loose tracking-wide">
-          My <strong className="font-bold text-xl">communication skills </strong> are excellent. I’ve worked
-          on the side as a banker for eight years. And an athlete for 9 years.
-          This experience has made me feel comfortable at{" "}
-          <strong className="font-bold text-xl">conveying ideas in creative ways</strong> so that everyone can understand them.
+          My{" "}
+          <strong className="font-bold text-xl">communication skills </strong>{" "}
+          are excellent. I’ve worked on the side as a banker for eight years.
+          And an athlete for 9 years. This experience has made me feel
+          comfortable at{" "}
+          <strong className="font-bold text-xl">
+            conveying ideas in creative ways
+          </strong>{" "}
+          so that everyone can understand them.
         </p>
         <p className="font-mulish font-light text-xl leading-loose tracking-wide">
           My experience working for a small startup albeit a brick and mortar

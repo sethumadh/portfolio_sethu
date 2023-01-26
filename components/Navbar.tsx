@@ -13,6 +13,17 @@ type NavbarProps = {
   isTopOfPage: boolean
 }
 const links = ["Home", "About", "Works", "Resume", "Contact"]
+const navLinks = [
+  { nav: "Home",href:"Home" },
+  { nav: "About",href:"About" },
+  { nav: "Works",href:"Works" },
+  {
+    nav: "Resume",
+    href: "https://drive.google.com/file/d/1y6HorM1qunKMRlCfTIX54pobqkoiyJDq/view?usp=share_link",
+    target: "_blank",
+  },
+  { nav: "Contact",href:"Contact" },
+]
 
 function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
   const scrollDirection = useScrollDirection()
@@ -52,26 +63,24 @@ function Navbar({ activePage, setActivePage, isTopOfPage }: NavbarProps) {
           </div>
         </Link>
         <ul className="links hidden w-full md:flex md:flex-row md:items-center md:justify-end  ">
-          {links.map((link, i) => (
+          {navLinks.map((link, i) => (
             <li
               key={i}
               className="font-mada  text-white xl:pl-20 lg:pl-16 md:pl-12 cursor-pointer capitalize font-medium tracking-[2px] hover:scale-110 transition duration-250 text-2xl"
             >
               <Link
-                href={`/#${link}`}
+                href={`${link.nav!="Resume"?`/#${link.href}`:`${link.href}`}`}
+                target={link.target}
                 // smooth={true}
                 // offset={-100}
                 // duration={500}
-                className={
-                  "" + activePage == link
-                    ? "border-b-2 border-gray-400 pb-0 rounded-l-md rounded-r-md transition duration-300"
-                    : ""
-                }
-                // onClick={() => setActivePage(link)}
+                className=""
               >
                 <div className=" relative">
-                  {link}
-                  <div className=" "><LineGradient width={'w-full'}/></div>
+                  {link.nav}
+                  <div className=" ">
+                    <LineGradient width={"w-full"} />
+                  </div>
                 </div>
               </Link>
             </li>
